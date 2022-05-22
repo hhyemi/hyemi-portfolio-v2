@@ -6,10 +6,10 @@ import React, {
   useState,
 } from "react";
 
+import { rootEm } from "@styles/global";
+import { theme } from "@themes/main";
 import throttle from "lodash/throttle";
 import { get } from "styled-system";
-import { rootEm } from "styles/global";
-import { theme } from "themes/main";
 
 export const LAYOUT_MAIN_MAX_WIDTH = 1586;
 export const LAYOUT_NAVBAR_ONLY_MAX_WIDTH = 1100;

@@ -1,7 +1,7 @@
 import React from "react";
 
+import theme from "@themes/main";
 import { ThemeProvider as ThemeUIThemeProvider } from "theme-ui";
-import theme from "themes/main";
 
 const ThemeProvider: React.FunctionComponent = (props) => {
   return (

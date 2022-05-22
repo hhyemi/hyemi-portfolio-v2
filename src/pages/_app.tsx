@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 
+import ResponsiveProvider from "@providers/responsive";
+import ThemeProvider from "@providers/theme";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import ResponsiveProvider from "providers/responsive";
-import ThemeProvider from "providers/theme";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (

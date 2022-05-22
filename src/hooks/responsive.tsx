@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 
-import { useResponsiveContext } from "providers";
+import { useResponsiveContext } from "@providers";
 import { ResponsiveStyleValue } from "theme-ui";
 
 /**

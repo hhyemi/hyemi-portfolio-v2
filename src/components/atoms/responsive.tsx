@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import { ResponsiveContext, useResponsiveContext } from "providers";
+import { ResponsiveContext, useResponsiveContext } from "@providers";
 
 export type ResponsiveProps = Omit<ResponsiveContext, "width" | "height" | "breakpoints">;
 

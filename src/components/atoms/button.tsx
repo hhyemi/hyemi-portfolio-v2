@@ -1,10 +1,9 @@
 import React, { forwardRef, useMemo } from "react";
 
 import styled from "@emotion/styled";
+import { useResponsive } from "@hooks";
 import { variant, VariantArgs } from "styled-system";
 import { Button as ThemeUIButton, ButtonProps as ThemeUIButtonProps, ResponsiveStyleValue } from "theme-ui";
-
-import { useResponsive } from "hooks";
 
 export type ButtonVariant = "white" | "primary" | "red" | "grey";
 export type ButtonAppearance = "filled" | "outlined" | "tonal" | "ghost";

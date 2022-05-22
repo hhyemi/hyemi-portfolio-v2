@@ -2,8 +2,8 @@
 // cf: https://theme-ui.com/theming
 // cf: https://theme-ui.com/components/variants
 // cf: https://theme-ui.com/guides/variants
+import { getTransparentColors } from "@utils";
 import { Theme as ThemeUITheme } from "theme-ui";
-import { getTransparentColors } from "utils";
 
 export type ThemeColor = keyof typeof theme.colors;
 
@@ -371,10 +371,10 @@ export const theme = getTheme({
     l1: "0.75rem", // 12px
   },
   fonts: {
-    headline: "Noto Sans KR, sans-serif",
-    subtitle: "Noto Sans KR, sans-serif",
-    paragraph: "Noto Sans KR, sans-serif",
-    label: "Noto Sans KR, sans-serif",
+    headline: "Montserrat, sans-serif",
+    subtitle: "Montserrat, sans-serif",
+    paragraph: "Montserrat, sans-serif",
+    label: "Montserrat, sans-serif",
   },
   fontWeights: {
     thin: 100,

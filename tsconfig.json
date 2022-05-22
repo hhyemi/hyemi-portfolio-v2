@@ -2,7 +2,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "*": ["src/*"],
+      "@components/*": ["./src/components/*"],
+      "@hooks": ["./src/hooks"],
+      "@maps/*": ["./src/maps/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@providers": ["./src/providers"],
+      "@providers/*": ["./src/providers/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@themes/*": ["./src/themes/*"],
+      "@utils": ["./src/utils"],
     },
     "target": "es5",
     "lib": [
