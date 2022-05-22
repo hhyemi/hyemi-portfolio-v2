@@ -371,10 +371,11 @@ export const theme = getTheme({
     l1: "0.75rem", // 12px
   },
   fonts: {
-    headline: "Montserrat, sans-serif",
-    subtitle: "Montserrat, sans-serif",
-    paragraph: "Montserrat, sans-serif",
-    label: "Montserrat, sans-serif",
+    headline: "Hahmlet, sans-serif",
+    subtitle: "Hahmlet, sans-serif",
+    paragraph: "Hahmlet, sans-serif",
+    label: "Hahmlet, sans-serif",
+    sidetitle: "Montserrat, sans-serif",
   },
   fontWeights: {
     thin: 100,

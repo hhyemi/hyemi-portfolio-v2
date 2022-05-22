@@ -18,8 +18,8 @@ class MyDocument extends Document {
           <meta name={"viewport"} content={"width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"}/>
           {/* fonts */}
           <link rel={"preconnect"} href={"https://fonts.gstatic.com"}/>
-          <link href={"https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap"} rel={"stylesheet"}/>
-          <link href={"https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"} rel={"stylesheet"}/>
+          <link href={"https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&display=swap"} rel={"stylesheet"}/>
+          <link href={"https://fonts.googleapis.com/css2?family=Montserrat:wght@600"} rel={"stylesheet"}/>
         </Head>
         <body>
           <Main/>

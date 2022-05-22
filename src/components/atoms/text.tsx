@@ -6,7 +6,7 @@ import { variant, VariantArgs } from "styled-system";
 import { ResponsiveStyleValue, Text as ThemeUIText, TextProps as ThemeUITextProps } from "theme-ui";
 
 export type TextVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "s1" | "s2" | "p1" | "p2" | "l1";
-export type TextAppearance = "default" | "hint" | "disabled" | "alternative" | "primary" | "red" | "green";
+export type TextAppearance = "default" | "hint" | "disabled" | "alternative" | "primary" | "red" | "green" | "black";
 
 export type TextProps = Omit<ThemeUITextProps, "variant"> & {
   variant?: ResponsiveStyleValue<TextVariant>;
@@ -38,6 +38,9 @@ export const appearance = variant({
     },
     green: {
       color: "green-700",
+    },
+    black: {
+      color: "grey-900",
     },
   },
 } as VariantArgs);
