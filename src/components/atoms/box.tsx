@@ -8,7 +8,7 @@ export type BoxProps = ThemeUIBoxProps & {
   appearance?: "success" | "error" | "info" | "warning";
 };
 
-export const appearance = variant({
+const appearance = variant({
   prop: "appearance",
   variants: {
     success: {

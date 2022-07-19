@@ -1,9 +1,8 @@
 import React from "react";
 
-import { Box } from "@components/atoms/box";
-import { Flex } from "@components/atoms/flex";
-import { Image } from "@components/atoms/image";
-import { Text } from "@components/atoms/text";
+import {
+  Box, Flex, Image, Text,
+} from "@components/atoms";
 
 export type AboutProps = {};
 

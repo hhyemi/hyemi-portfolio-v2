@@ -1,10 +1,9 @@
 import React from "react";
 
-import { Box } from "@components/atoms/box";
-import { Flex } from "@components/atoms/flex";
-import { StyledLink } from "@components/atoms/styled-link";
-import { Text } from "@components/atoms/text";
-import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@components/organisms/navbar";
+import {
+  Box, Flex, StyledLink, Text,
+} from "@components/atoms";
+import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@components/organisms";
 
 export const SIDEBAR_WIDTH = 268;
 

@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Box } from "@components/atoms/box";
-import { MoreButton } from "@components/molecules/more-button";
-import { About } from "@components/templates/about";
-import { LayoutMain } from "@components/templates/layout-main";
-import { Main, MD_AND_UP_CONTENT_PADDING, SM_CONTENT_PADDING } from "@components/templates/main";
+import { Box } from "@components/atoms";
+import { MoreButton } from "@components/molecules";
+import {
+  About, LayoutMain, Main, MD_AND_UP_CONTENT_PADDING, SM_CONTENT_PADDING,
+} from "@components/templates";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {

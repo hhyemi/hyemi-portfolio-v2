@@ -1,9 +1,7 @@
 import React from "react";
 
-import { Flex, FlexProps } from "@components/atoms/flex";
-import { Responsive } from "@components/atoms/responsive";
-import { Navbar } from "@components/organisms/navbar";
-import { Sidebar } from "@components/organisms/sidabar";
+import { Flex, FlexProps, Responsive } from "@components/atoms";
+import { Navbar, Sidebar } from "@components/organisms";
 
 export type LayoutMainProps = FlexProps & {
   navbarStyle?: FlexProps;

@@ -231,63 +231,6 @@ export const palette = {
   ...transparentPalette,
 };
 
-export const injuryColors = {
-  "injury-level-0-30": "rgba(197, 206, 224, 0.3)",
-  "injury-level-1-80": "rgba(255, 201, 173, 0.8)",
-  "injury-level-2-80": "rgba(255, 164, 131, 0.8)",
-  "injury-level-3-80": "rgba(255, 129, 101, 0.8)",
-  "injury-level-4-80": "rgba(219, 40, 36, 0.8)",
-  "injury-level-5-80": "rgba(147, 15, 34, 0.8)",
-  "injury-level-1": "#ffc9ad",
-  "injury-level-2": "#ffa483",
-  "injury-level-3": "#ff8165",
-  "injury-level-4": "#db2824",
-  "injury-level-5": "#930f22",
-  "injury-level-1-hover": "#faa67b",
-  "injury-level-2-hover": "#f9662d",
-  "injury-level-3-hover": "#ff4626",
-  "injury-level-4-hover": "#c00a0d",
-  "injury-level-5-hover": "#790b1b",
-  "injury-cx-level-1": "rgba(34, 43, 69, 0.15)",
-  "injury-cx-level-2": "rgba(34, 43, 69, 0.3)",
-  "injury-cx-level-3": "rgba(34, 43, 69, 0.4)",
-  "injury-cx-level-4": "rgba(34, 43, 69, 0.6)",
-  "injury-cx-level-5": "rgba(34, 43, 69, 0.8)",
-};
-
-export const trainingColors = {
-  "under-training-bg": "rgba(255, 170, 2, 0.1)",
-  "under-training": "#ffaa02",
-  "optimal-training-bg": "rgba(136, 221, 24, 0.3)",
-  "optimal-training": "#88dd18",
-  "over-training-bg": "rgba(255, 71, 50, 0.1)",
-  "over-training": "#ff4732",
-};
-
-export const gradationColors = {
-  GOOD_START: "#33F3BD",
-  GOOD_END: "#4EFF5B",
-  WARNING_START: "#FFC145",
-  WARNING_END: "#FF9E00",
-  DANGER_START: "#FF4732",
-  DANGER_END: "#FF6553",
-  NONE_START: "#C5CEE0",
-  NONE_END: "#C5CEE0",
-};
-
-export const degreeColors = {
-  DANGER: palette["red-500"],
-  WARNING: palette["amber-700"],
-  GOOD: palette["green-700"],
-  NONE: palette["grey-300"],
-  NEUTRAL: "#c7a886",
-  INJURY1: injuryColors["injury-level-1-80"],
-  INJURY2: injuryColors["injury-level-2-80"],
-  INJURY3: injuryColors["injury-level-3-80"],
-  INJURY4: injuryColors["injury-level-4-80"],
-  INJURY5: injuryColors["injury-level-5-80"],
-};
-
 export const breakpoints = [
   // "0rem", //     0 ≥ screen < 600px  | sm | mobile
   "37.5rem", // 600px ≥ screen < 960px  | md | tablet
@@ -301,10 +244,6 @@ export const theme = getTheme({
   breakpoints: breakpoints,
   colors: {
     ...palette,
-    ...degreeColors,
-    ...gradationColors,
-    ...injuryColors,
-    ...trainingColors,
     "primary": palette["primary-500"],
     "neutral": palette["grey-500"],
     "success": palette["green-700"],
@@ -1290,11 +1229,6 @@ export const theme = getTheme({
         sm: "440px",
         md: "600px",
         lg: "800px",
-      },
-    },
-    dialogModal: {
-      width: {
-        sm: "416px",
       },
     },
   },

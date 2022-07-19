@@ -1,9 +1,8 @@
 import React from "react";
 
-import { Box } from "@components/atoms/box";
-import { Flex, FlexProps } from "@components/atoms/flex";
-import { Icon } from "@components/atoms/icon";
-import { Responsive } from "@components/atoms/responsive";
+import {
+  Box, Flex, FlexProps, Icon, Responsive,
+} from "@components/atoms";
 
 export const SM_TOP_NAV_HEIGHT = 56;
 export const MD_AND_UP_TOP_NAV_HEIGHT = 70;

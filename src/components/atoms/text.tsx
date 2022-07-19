@@ -15,7 +15,7 @@ export type TextProps = Omit<ThemeUITextProps, "variant"> & {
   ellipsis?: boolean;
 };
 
-export const appearance = variant({
+const appearance = variant({
   prop: "appearance",
   variants: {
     default: {

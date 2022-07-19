@@ -1,9 +1,8 @@
 import React from "react";
 
-import { Box } from "@components/atoms/box";
-import { Flex } from "@components/atoms/flex";
-import { Icon } from "@components/atoms/icon";
-import { StyledLink } from "@components/atoms/styled-link";
+import {
+  Box, Flex, Icon, StyledLink,
+} from "@components/atoms";
 import { keyframes } from "@emotion/react";
 
 export type MoreButtonProps = {};
