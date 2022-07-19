@@ -27,10 +27,10 @@ export const Main: React.FunctionComponent<MainProps> = () => {
           marginTop: [`-${SM_CONTENT_TOP}px`, `-${MD_AND_UP_CONTENT_TOP}px`],
           ...scrollStyle,
         }}>
-        <Text appearance={"black"} sx={{ fontSize: ["60px", "72px", "80px"], whiteSpace: "pre-line" }}>
+        <Text sx={{ fontSize: ["60px", "72px", "80px"]}}>
           {"HELLO, \n I'M HYEMI"}
         </Text>
-        <Text variant={["h4", "h3", "h2"]} appearance={"black"} sx={{ whiteSpace: "pre-line" }}>
+        <Text variant={["h4", "h3", "h2"]}>
           {"FRONT-END DEVELOPER"}
         </Text>
       </Box>

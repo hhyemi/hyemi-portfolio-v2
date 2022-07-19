@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Box } from "@components/atoms";
-import { MoreButton } from "@components/molecules";
 import {
   About, LayoutMain, Main, MD_AND_UP_CONTENT_PADDING, SM_CONTENT_PADDING,
 } from "@components/templates";
@@ -15,8 +14,6 @@ const Home: NextPage = () => {
         <Main/>
         <About/>
       </Box>
-
-      <MoreButton/>
 
     </LayoutMain>
   );

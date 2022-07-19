@@ -76,7 +76,7 @@ export const Text: React.FunctionComponent<TextProps> = forwardRef((
       };
     }
 
-    return {};
+    return { whiteSpace: "pre-line" };
   }, [ellipsis, multiLineEllipsis]);
 
   const responsiveVariant = useMemo(() => getResponsiveProp(variant), [variant, getResponsiveProp]);

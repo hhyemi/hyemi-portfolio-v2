@@ -1,11 +1,20 @@
 import React from "react";
 
 import {
-  Box, Flex, Image, Text,
+  Box, Flex, Image, Text, TextProps,
 } from "@components/atoms";
 import { useScrollFadeIn } from "@hooks";
 
 export type AboutProps = {};
+
+const AboutText = (props: TextProps) => <Text
+  variant={["s2", "s1", "s2", "h5"]}
+  sx={{
+    width: "112px",
+    lineHeight: 1.8,
+  }}
+  {...props}
+/>;
 
 export const About: React.FunctionComponent<AboutProps> = () => {
   const aboutMeItems = [
@@ -21,7 +30,6 @@ export const About: React.FunctionComponent<AboutProps> = () => {
 
   return (
     <Flex
-      id={"about"}
       sx={{
         height: "100vh",
         justifyContent: "center",
@@ -33,7 +41,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
     >
 
       <Box ref={scrollRef} sx={{ maxWidth: ["auto", "800px", "700px", "1000px"], ...scrollStyle }}>
-        <Text variant={["h3", "h2", "h1"]} appearance={"black"} sx={{ whiteSpace: "pre-line", pb: 4 }}>
+        <Text variant={["h3", "h2", "h1"]} sx={{ pb: 4 }}>
           {"ABOUT ME"}
         </Text>
         <Flex sx={{ flexDirection: ["column", null, "row"]}}>
@@ -48,7 +56,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
               mb: [3, 5, 0],
             }}/>
           <Box>
-            <Text variant={["s1", "h5"]} appearance={"black"} sx={{ width: "auto", whiteSpace: "pre-line" }}>
+            <Text variant={["s1", "h5"]} sx={{ width: "auto" }}>
               {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요! "}
               {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
               {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
@@ -60,12 +68,12 @@ export const About: React.FunctionComponent<AboutProps> = () => {
             {aboutMeItems.map((el) => {
               return (
                 <Flex key={el.value}>
-                  <Text variant={["s1", "h5"]} appearance={"hint"} sx={{
-                    width: "112px", whiteSpace: "pre-line", lineHeight: 1.8,
-                  }}>{el.title}</Text>
-                  <Text variant={["s1", "h5"]} appearance={"black"} sx={{
-                    width: "auto", whiteSpace: "pre-line", lineHeight: 1.8,
-                  }}>{el.value}</Text>
+                  <AboutText appearance={"hint"} sx={{ width: "112px" }}>
+                    {el.title}
+                  </AboutText>
+                  <AboutText sx={{ width: "auto" }}>
+                    {el.value}
+                  </AboutText>
                 </Flex>
               );
             })}
