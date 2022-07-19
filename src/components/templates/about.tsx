@@ -3,6 +3,7 @@ import React from "react";
 import {
   Box, Flex, Image, Text,
 } from "@components/atoms";
+import { useScrollFadeIn } from "@hooks";
 
 export type AboutProps = {};
 
@@ -16,6 +17,8 @@ export const About: React.FunctionComponent<AboutProps> = () => {
     { title: "자격증", value: "정보처리기사" },
   ];
 
+  const { ref: scrollRef, style: scrollStyle } = useScrollFadeIn("up", 1, 0);
+
   return (
     <Flex
       id={"about"}
@@ -26,8 +29,10 @@ export const About: React.FunctionComponent<AboutProps> = () => {
         alignItems: "center",
         py: 4,
         ml: [0, null, "200px"],
-      }}>
-      <Box sx={{ maxWidth: ["auto", "800px", "700px", "1000px"]}}>
+      }}
+    >
+
+      <Box ref={scrollRef} sx={{ maxWidth: ["auto", "800px", "700px", "1000px"], ...scrollStyle }}>
         <Text variant={["h3", "h2", "h1"]} appearance={"black"} sx={{ whiteSpace: "pre-line", pb: 4 }}>
           {"ABOUT ME"}
         </Text>
