@@ -12,6 +12,7 @@ export type DrawerProps = {};
 const ContainerFlex = (({ ...props }) => {
   return (<Flex
     sx={{
+      position: "absolute",
       flexDirection: "column",
       width: SIDEBAR_WIDTH,
       height: "auto",
@@ -26,7 +27,7 @@ const ContainerFlex = (({ ...props }) => {
 export const Sidebar: React.FunctionComponent<DrawerProps> = () => {
   return (
     <ContainerFlex>
-      <Box sx={{ paddingLeft: 12 }}>
+      <Box sx={{ paddingLeft: 12, position: "fixed" }}>
         <Text variant={"h5"} sx={{ fontFamily: "sidetitle", my: 4, letterSpacing: "0.1em" }}>{"ABOUT"}</Text>
         <Text variant={"h5"} sx={{ fontFamily: "sidetitle", my: 4, letterSpacing: "0.1em" }}>{"SKILLS"}</Text>
         <Text variant={"h5"} sx={{ fontFamily: "sidetitle", my: 4, letterSpacing: "0.1em" }}>{"PROJECTS"}</Text>

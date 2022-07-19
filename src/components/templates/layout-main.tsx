@@ -33,12 +33,9 @@ const ContentFlex = (props: FlexProps) => <Flex
   sx={{
     justifyContent: "center",
     flex: "auto",
-    p: LAYOUT_MAIN_CONTENT_PADDING,
   }}
   {...props}
 />;
-
-export const LAYOUT_MAIN_CONTENT_PADDING = [2, 4, 4, 4];
 
 export const LayoutMain: React.FunctionComponent<LayoutMainProps> = ({
   children,
@@ -48,10 +45,10 @@ export const LayoutMain: React.FunctionComponent<LayoutMainProps> = ({
     <ContainerFlex {...rest}>
       <Navbar/>
       <MainFlex>
-        <Responsive lgAndUp>
-          <Sidebar/>
-        </Responsive>
         <ContentFlex>
+          <Responsive lgAndUp>
+            <Sidebar/>
+          </Responsive>
           {children}
         </ContentFlex>
       </MainFlex>
