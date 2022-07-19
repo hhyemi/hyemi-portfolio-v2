@@ -1,14 +1,24 @@
 import React from "react";
 
-import { Flex } from "@components/atoms/flex";
-import { Text } from "@components/atoms/text";
+import { Box } from "@components/atoms/box";
+import { MoreButton } from "@components/molecules/more-button";
+import { About } from "@components/templates/about";
+import { LayoutMain } from "@components/templates/layout-main";
+import { Main, MD_AND_UP_CONTENT_PADDING, SM_CONTENT_PADDING } from "@components/templates/main";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <Flex>
-      <Text>{"HOME"}</Text>
-    </Flex>
+    <LayoutMain>
+
+      <Box sx={{ flexGrow: 1, flexBasis: 0, p: [`${SM_CONTENT_PADDING}px`, `${MD_AND_UP_CONTENT_PADDING}px`]}}>
+        <Main/>
+        <About/>
+      </Box>
+
+      <MoreButton/>
+
+    </LayoutMain>
   );
 };
 

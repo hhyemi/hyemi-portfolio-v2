@@ -12,9 +12,11 @@ export type NavbarProps = FlexProps & {};
 
 const ContainerFlex = (props: FlexProps) => <Flex
   sx={{
-    px: 4,
+    width: "100%",
+    position: "fixed",
     alignItems: "center",
     height: [SM_TOP_NAV_HEIGHT, MD_AND_UP_TOP_NAV_HEIGHT],
+    px: 4,
     ...props.sx,
   }}
   {...props}
