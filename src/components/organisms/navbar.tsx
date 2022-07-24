@@ -3,9 +3,7 @@ import React from "react";
 import {
   Box, Flex, FlexProps, Icon, Responsive,
 } from "@components/atoms";
-
-export const SM_TOP_NAV_HEIGHT = 56;
-export const MD_AND_UP_TOP_NAV_HEIGHT = 70;
+import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@themes/main";
 
 export type NavbarProps = FlexProps & {};
 

@@ -4,11 +4,13 @@ import {
   Box, Flex, Image, Text, TextProps,
 } from "@components/atoms";
 import { useScrollFadeIn } from "@hooks";
+import { MeunTitle } from "@pages/index";
+import { MD_AND_UP_CONTENT_PADDING, SECTION_WIDTH, SM_CONTENT_PADDING } from "@themes/main";
 
 export type AboutProps = {};
 
 const AboutText = (props: TextProps) => <Text
-  variant={["p1", "s2", "p1", "s1"]}
+  variant={["s2", "s1", "s2", "h5"]}
   sx={{
     width: "112px",
     lineHeight: 1.8,
@@ -37,13 +39,14 @@ export const About: React.FunctionComponent<AboutProps> = () => {
         alignItems: "center",
         py: 4,
         ml: [0, null, "200px"],
+        p: [`${SM_CONTENT_PADDING}px`, `${MD_AND_UP_CONTENT_PADDING}px`],
       }}
     >
 
-      <Box ref={scrollRef} sx={{ maxWidth: ["auto", "800px", "700px", "1000px"], ...scrollStyle }}>
-        <Text variant={["h3", "h2", "h1"]} sx={{ pb: 4, fontFamily: "title", letterSpacing: "0.1em" }}>
+      <Box ref={scrollRef} sx={{ width: SECTION_WIDTH, ...scrollStyle }}>
+        <MeunTitle>
           {"ABOUT ME"}
-        </Text>
+        </MeunTitle>
         <Flex sx={{ flexDirection: ["column", null, "row"]}}>
           <Image
             src={"/images/profile.jpeg"}
@@ -56,7 +59,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
               mb: [3, 5, 0],
             }}/>
           <Box>
-            <Text variant={["s2", "s1"]} sx={{ width: "auto" }}>
+            <Text variant={["s1", "h5"]} sx={{ width: "auto" }}>
               {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요! "}
               {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
               {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}

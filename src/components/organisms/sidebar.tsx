@@ -3,7 +3,7 @@ import React from "react";
 import {
   Box, Flex, StyledLink, Text, TextProps,
 } from "@components/atoms";
-import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@components/organisms";
+import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@themes/main";
 
 export const SIDEBAR_WIDTH = 268;
 

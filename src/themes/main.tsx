@@ -7,6 +7,14 @@ import { Theme as ThemeUITheme } from "theme-ui";
 
 export type ThemeColor = keyof typeof theme.colors;
 
+export const SECTION_WIDTH = ["auto", "800px", "700px", "1000px"];
+export const SM_TOP_NAV_HEIGHT = 56;
+export const MD_AND_UP_TOP_NAV_HEIGHT = 70;
+export const SM_CONTENT_PADDING = 16;
+export const MD_AND_UP_CONTENT_PADDING = 32;
+export const SM_CONTENT_TOP = SM_TOP_NAV_HEIGHT + SM_CONTENT_PADDING;
+export const MD_AND_UP_CONTENT_TOP = MD_AND_UP_TOP_NAV_HEIGHT + MD_AND_UP_CONTENT_PADDING;
+
 type TransparentPalette = Record<
 "primary-500-8" | "primary-500-16" | "primary-500-24" | "primary-500-32" | "primary-500-40" | "primary-500-48" |
 "primary-500-56" | "primary-500-64" | "primary-500-72" | "primary-500-80" | "primary-500-88" | "primary-500-96" |
@@ -670,7 +678,7 @@ export const theme = getTheme({
     },
   },
   radii: {
-    default: 4,
+    default: 10,
   },
   variants: {
     card: {
@@ -1187,14 +1195,14 @@ export const theme = getTheme({
     },
   },
   shadows: {
-    card: "0px 1px 3px 0px #0000000a",
+    card: "0px 1px 3px 0px #0101019",
     inputButton: "0px 1px 2px 0px rgba(0, 0, 0, 0.08)",
     box: "0px 1px 3px 0px rgba(0, 0, 0, 0.04)",
     circle: "0px 1px 2px 0px rgba(0, 0, 0, 0.08)",
   },
   borders: {
     default: `1px solid ${palette["grey-100"]}`,
-    card: ` 1px solid ${palette["grey-100"]}`,
+    card: ` 1px solid ${palette["grey-200"]}`,
     table: `1px solid ${palette["grey-100"]}`,
     inputButton: "1px solid #d8dce6",
     flexMore: `1px solid ${palette["grey-100"]}`,

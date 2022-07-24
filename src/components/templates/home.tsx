@@ -1,24 +1,21 @@
 import React from "react";
 
 import { Box, Flex, Text } from "@components/atoms";
-import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@components/organisms";
 import { useScrollFadeIn } from "@hooks";
+import {
+  MD_AND_UP_CONTENT_PADDING, MD_AND_UP_CONTENT_TOP, SM_CONTENT_PADDING, SM_CONTENT_TOP,
+} from "@themes/main";
 
-export type MainProps = {};
+export type HomeProps = {};
 
-export const SM_CONTENT_PADDING = 16;
-export const MD_AND_UP_CONTENT_PADDING = 32;
-
-const SM_CONTENT_TOP = SM_TOP_NAV_HEIGHT + SM_CONTENT_PADDING;
-const MD_AND_UP_CONTENT_TOP = MD_AND_UP_TOP_NAV_HEIGHT + MD_AND_UP_CONTENT_PADDING;
-
-export const Main: React.FunctionComponent<MainProps> = () => {
+export const Home: React.FunctionComponent<HomeProps> = () => {
   const { ref: scrollRef, style: scrollStyle } = useScrollFadeIn("up", 1, 0);
 
   return (
     <Flex sx={{
       justifyContent: "center",
       height: "100vh",
+      p: [`${SM_CONTENT_PADDING}px`, `${MD_AND_UP_CONTENT_PADDING}px`],
     }}>
       <Box
         ref={scrollRef}
