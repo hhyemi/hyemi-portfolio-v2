@@ -4,7 +4,6 @@ import {
   Box, Flex, Image, Text, TextProps,
 } from "@components/atoms";
 import { useScrollFadeIn } from "@hooks";
-import { MeunTitle } from "@pages/index";
 import { MD_AND_UP_CONTENT_PADDING, SECTION_WIDTH, SM_CONTENT_PADDING } from "@themes/main";
 
 export type AboutProps = {};
@@ -28,7 +27,8 @@ export const About: React.FunctionComponent<AboutProps> = () => {
     { title: "자격증", value: "정보처리기사" },
   ];
 
-  const { ref: scrollRef, style: scrollStyle } = useScrollFadeIn("up", 1, 0);
+  const { ref: scrollTitleRef, style: scrollTitleStyle } = useScrollFadeIn("up", 1, 0);
+  const { ref: scrollContnetRef, style: scrollContnetStyle } = useScrollFadeIn("right", 1.5, 0.3);
 
   return (
     <Flex
@@ -43,45 +43,56 @@ export const About: React.FunctionComponent<AboutProps> = () => {
       }}
     >
 
-      <Box ref={scrollRef} sx={{ width: SECTION_WIDTH, ...scrollStyle }}>
-        <MeunTitle>
+      <Box sx={{ width: SECTION_WIDTH }}>
+        <Text
+          ref={scrollTitleRef}
+          variant={["h3", "h2", "h1"]}
+          sx={{
+            pb: 4,
+            fontFamily: "title",
+            letterSpacing: "0.1em",
+            ...scrollTitleStyle,
+          }}>
           {"ABOUT ME"}
-        </MeunTitle>
-        <Flex sx={{ flexDirection: ["column", null, "row"]}}>
-          <Image
-            src={"/images/profile.jpeg"}
-            sx={{
-              alignSelf: ["center", null, "flex-start"],
-              width: ["40%", "30%"],
-              minWidth: ["40%", "30%"],
-              height: "auto",
-              mr: [3, 5, null, 7],
-              mb: [3, 5, 0],
-            }}/>
-          <Box>
-            <Text variant={["s1", "h5"]} sx={{ width: "auto" }}>
-              {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요! "}
-              {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
-              {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
-              {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
-              {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
-              {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!\n\n"}
-            </Text>
+        </Text>
 
-            {aboutMeItems.map((el) => {
-              return (
-                <Flex key={el.value}>
-                  <AboutText appearance={"hint"} sx={{ width: "112px" }}>
-                    {el.title}
-                  </AboutText>
-                  <AboutText sx={{ width: "auto" }}>
-                    {el.value}
-                  </AboutText>
-                </Flex>
-              );
-            })}
-          </Box>
-        </Flex>
+        <Box ref={scrollContnetRef} sx={{ ...scrollContnetStyle }}>
+          <Flex sx={{ flexDirection: ["column", null, "row"]}}>
+            <Image
+              src={"/images/profile.jpeg"}
+              sx={{
+                alignSelf: ["center", null, "flex-start"],
+                width: ["40%", "30%"],
+                minWidth: ["40%", "30%"],
+                height: "auto",
+                mr: [3, 5, null, 7],
+                mb: [3, 5, 0],
+              }}/>
+            <Box>
+              <Text variant={["s1", "h5"]} sx={{ width: "auto" }}>
+                {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요! "}
+                {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
+                {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
+                {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
+                {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
+                {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!\n\n"}
+              </Text>
+
+              {aboutMeItems.map((el) => {
+                return (
+                  <Flex key={el.value}>
+                    <AboutText appearance={"hint"} sx={{ width: "112px" }}>
+                      {el.title}
+                    </AboutText>
+                    <AboutText sx={{ width: "auto" }}>
+                      {el.value}
+                    </AboutText>
+                  </Flex>
+                );
+              })}
+            </Box>
+          </Flex>
+        </Box>
       </Box>
     </Flex>
   );
