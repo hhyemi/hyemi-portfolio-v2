@@ -8,7 +8,7 @@ import { useScrollFadeIn } from "@hooks";
 export type AboutProps = {};
 
 const AboutText = (props: TextProps) => <Text
-  variant={["s2", "s1", "s2", "h5"]}
+  variant={["p1", "s2", "p1", "s1"]}
   sx={{
     width: "112px",
     lineHeight: 1.8,
@@ -41,7 +41,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
     >
 
       <Box ref={scrollRef} sx={{ maxWidth: ["auto", "800px", "700px", "1000px"], ...scrollStyle }}>
-        <Text variant={["h3", "h2", "h1"]} sx={{ pb: 4 }}>
+        <Text variant={["h3", "h2", "h1"]} sx={{ pb: 4, fontFamily: "title", letterSpacing: "0.1em" }}>
           {"ABOUT ME"}
         </Text>
         <Flex sx={{ flexDirection: ["column", null, "row"]}}>
@@ -56,7 +56,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
               mb: [3, 5, 0],
             }}/>
           <Box>
-            <Text variant={["s1", "h5"]} sx={{ width: "auto" }}>
+            <Text variant={["s2", "s1"]} sx={{ width: "auto" }}>
               {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요! "}
               {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}
               {"자기소개안녕하세요! 자기소개안녕하세요! 자기소개안녕하세요!"}

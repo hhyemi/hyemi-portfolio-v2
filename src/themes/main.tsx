@@ -310,11 +310,11 @@ export const theme = getTheme({
     l1: "0.75rem", // 12px
   },
   fonts: {
-    headline: "Hahmlet, sans-serif",
-    subtitle: "Hahmlet, sans-serif",
-    paragraph: "Hahmlet, sans-serif",
-    label: "Hahmlet, sans-serif",
-    sidetitle: "Montserrat, sans-serif",
+    headline: "Noto Sans KR, sans-serif",
+    subtitle: "Noto Sans KR, sans-serif",
+    paragraph: "Noto Sans KR, sans-serif",
+    label: "Noto Sans KR, sans-serif",
+    title: "Montserrat, sans-serif",
   },
   fontWeights: {
     thin: 100,
