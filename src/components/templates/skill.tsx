@@ -4,7 +4,7 @@ import {
   Box, Card, Flex, Text, TextProps,
 } from "@components/atoms";
 import { useScrollFadeIn } from "@hooks";
-import { SECTION_WIDTH } from "@themes/main";
+import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 
 const SkillTitle = (props: TextProps) => <Text
   variant={["s1", "h5"]}
@@ -23,7 +23,7 @@ export type SkillProps = {};
 
 export const Skill: React.FunctionComponent<SkillProps> = () => {
   const { ref: scrollTitleRef, style: scrollTitleStyle } = useScrollFadeIn("up", 1, 0);
-  const { ref: scrollContnetRef, style: scrollContnetStyle } = useScrollFadeIn("right", 1.5, 0.3);
+  const { ref: scrollContnetRef, style: scrollContnetStyle } = useScrollFadeIn("up", 1.5, 0.3);
 
   return (
     <Flex
@@ -34,6 +34,7 @@ export const Skill: React.FunctionComponent<SkillProps> = () => {
         alignItems: "center",
         py: 4,
         ml: [0, null, "100px"],
+        p: `${CONTENT_PADDING}px`,
       }}
     >
       <Box sx={{ width: SECTION_WIDTH }}>

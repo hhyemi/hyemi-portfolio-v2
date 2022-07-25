@@ -4,7 +4,7 @@ import {
   Box, Flex, Image, Text, TextProps,
 } from "@components/atoms";
 import { useScrollFadeIn } from "@hooks";
-import { MD_AND_UP_CONTENT_PADDING, SECTION_WIDTH, SM_CONTENT_PADDING } from "@themes/main";
+import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 
 export type AboutProps = {};
 
@@ -28,7 +28,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
   ];
 
   const { ref: scrollTitleRef, style: scrollTitleStyle } = useScrollFadeIn("up", 1, 0);
-  const { ref: scrollContnetRef, style: scrollContnetStyle } = useScrollFadeIn("right", 1.5, 0.3);
+  const { ref: scrollContnetRef, style: scrollContnetStyle } = useScrollFadeIn("up", 1.5, 0.3);
 
   return (
     <Flex
@@ -39,7 +39,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
         alignItems: "center",
         py: 4,
         ml: [0, null, "100px"],
-        p: [`${SM_CONTENT_PADDING}px`, `${MD_AND_UP_CONTENT_PADDING}px`],
+        p: `${CONTENT_PADDING}px`,
       }}
     >
 

@@ -7,13 +7,12 @@ import { Theme as ThemeUITheme } from "theme-ui";
 
 export type ThemeColor = keyof typeof theme.colors;
 
-export const SECTION_WIDTH = ["auto", "800px", "700px", "1000px"];
+export const SECTION_WIDTH = ["100%", "800px", "700px", "1000px"];
 export const SM_TOP_NAV_HEIGHT = 56;
 export const MD_AND_UP_TOP_NAV_HEIGHT = 70;
-export const SM_CONTENT_PADDING = 16;
-export const MD_AND_UP_CONTENT_PADDING = 32;
-export const SM_CONTENT_TOP = SM_TOP_NAV_HEIGHT + SM_CONTENT_PADDING;
-export const MD_AND_UP_CONTENT_TOP = MD_AND_UP_TOP_NAV_HEIGHT + MD_AND_UP_CONTENT_PADDING;
+export const CONTENT_PADDING = 32;
+export const SM_CONTENT_TOP = SM_TOP_NAV_HEIGHT + CONTENT_PADDING;
+export const MD_AND_UP_CONTENT_TOP = MD_AND_UP_TOP_NAV_HEIGHT + CONTENT_PADDING;
 
 type TransparentPalette = Record<
 "primary-500-8" | "primary-500-16" | "primary-500-24" | "primary-500-32" | "primary-500-40" | "primary-500-48" |
