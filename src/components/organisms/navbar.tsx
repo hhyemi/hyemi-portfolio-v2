@@ -14,6 +14,7 @@ const ContainerFlex = (props: FlexProps) => <Flex
     alignItems: "center",
     height: [SM_TOP_NAV_HEIGHT, MD_AND_UP_TOP_NAV_HEIGHT],
     px: 4,
+    zIndex: 99,
     ...props.sx,
   }}
   {...props}

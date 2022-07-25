@@ -5,7 +5,7 @@ import {
 } from "@components/atoms";
 import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@themes/main";
 
-export const SIDEBAR_WIDTH = 268;
+export const SIDEBAR_WIDTH = "13%";
 
 export type DrawerProps = {};
 
@@ -13,6 +13,7 @@ const ContainerFlex = (({ ...props }) => {
   return (<Flex
     sx={{
       position: "absolute",
+      alignItems: "center",
       flexDirection: "column",
       width: SIDEBAR_WIDTH,
       height: "auto",
@@ -25,7 +26,7 @@ const ContainerFlex = (({ ...props }) => {
 });
 
 const Title = (props: TextProps) => <Text
-  variant={"h5"}
+  variant={["s2", null, null, "s1"]}
   sx={{
     fontFamily: "title",
     letterSpacing: "0.1em",
@@ -37,10 +38,10 @@ const Title = (props: TextProps) => <Text
 export const Sidebar: React.FunctionComponent<DrawerProps> = () => {
   return (
     <ContainerFlex>
-      <Box sx={{ paddingLeft: [0, 0, 6, 12], position: "fixed" }}>
+      <Box sx={{ position: "fixed" }}>
         <StyledLink
           href={"#about"}>
-          <Text variant={"h5"} sx={{ fontFamily: "title", my: 4, letterSpacing: "0.1em" }}>{"ABOUT"}</Text>
+          <Title>{"ABOUT"}</Title>
         </StyledLink>
         <Title>{"SKILLS"}</Title>
         <Title>{"PROJECTS"}</Title>

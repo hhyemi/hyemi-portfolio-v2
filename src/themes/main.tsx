@@ -315,7 +315,7 @@ export const theme = getTheme({
     s2: "1rem", // 16px
     p1: "0.875rem", // 14px
     p2: "0.75rem", // 12px
-    l1: "0.75rem", // 12px
+    l1: "0.625rem", // 10px
   },
   fonts: {
     headline: "Noto Sans KR, sans-serif",

@@ -33,7 +33,7 @@ export const Skill: React.FunctionComponent<SkillProps> = () => {
         alignSelf: "center",
         alignItems: "center",
         py: 4,
-        ml: [0, null, "200px"],
+        ml: [0, null, "100px"],
       }}
     >
       <Box sx={{ width: SECTION_WIDTH }}>

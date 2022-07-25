@@ -38,7 +38,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
         alignSelf: "center",
         alignItems: "center",
         py: 4,
-        ml: [0, null, "200px"],
+        ml: [0, null, "100px"],
         p: [`${SM_CONTENT_PADDING}px`, `${MD_AND_UP_CONTENT_PADDING}px`],
       }}
     >
