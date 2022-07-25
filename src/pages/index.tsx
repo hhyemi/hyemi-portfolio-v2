@@ -2,7 +2,7 @@ import React from "react";
 
 import { Box } from "@components/atoms";
 import {
-  About, Home, LayoutMain, Skill,
+  About, Career, Home, LayoutMain, Skill,
 } from "@components/templates";
 import type { NextPage } from "next";
 
@@ -14,6 +14,7 @@ const Main: NextPage = () => {
         <Home/>
         <About/>
         <Skill/>
+        <Career/>
       </Box>
 
     </LayoutMain>

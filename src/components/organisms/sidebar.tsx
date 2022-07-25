@@ -44,8 +44,8 @@ export const Sidebar: React.FunctionComponent<DrawerProps> = () => {
           <Title>{"ABOUT"}</Title>
         </StyledLink>
         <Title>{"SKILLS"}</Title>
-        <Title>{"PROJECTS"}</Title>
         <Title>{"CAREER"}</Title>
+        <Title>{"PROJECTS"}</Title>
       </Box>
     </ContainerFlex>
   );

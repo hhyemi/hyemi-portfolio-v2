@@ -81,7 +81,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
               {aboutMeItems.map((el) => {
                 return (
                   <Flex key={el.value}>
-                    <AboutText appearance={"hint"} sx={{ width: "112px" }}>
+                    <AboutText appearance={"gray"} sx={{ width: "112px" }}>
                       {el.title}
                     </AboutText>
                     <AboutText sx={{ width: "auto" }}>

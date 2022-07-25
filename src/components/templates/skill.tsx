@@ -8,7 +8,7 @@ import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 
 const SkillTitle = (props: TextProps) => <Text
   variant={["s1", "h5"]}
-  appearance={"hint"}
+  appearance={"gray"}
   sx={{ flex: 1 }}
   {...props}
 />;

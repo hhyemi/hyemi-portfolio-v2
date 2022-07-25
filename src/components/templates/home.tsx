@@ -6,7 +6,7 @@ import {
 } from "@components/atoms";
 import { useScrollFadeIn } from "@hooks";
 import {
-  MD_AND_UP_CONTENT_PADDING, MD_AND_UP_CONTENT_TOP, SM_CONTENT_PADDING, SM_CONTENT_TOP,
+  CONTENT_PADDING, MD_AND_UP_CONTENT_TOP, SM_CONTENT_TOP,
 } from "@themes/main";
 
 export type HomeProps = {};
@@ -18,7 +18,7 @@ export const Home: React.FunctionComponent<HomeProps> = () => {
     <Flex sx={{
       justifyContent: "center",
       height: "100vh",
-      p: [`${SM_CONTENT_PADDING}px`, `${MD_AND_UP_CONTENT_PADDING}px`],
+      p: [`${CONTENT_PADDING}px`],
     }}>
       <Box
         ref={scrollRef}

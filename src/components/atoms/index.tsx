@@ -1,6 +1,7 @@
 export * from "./box";
 export * from "./button";
 export * from "./card";
+export * from "./divider";
 export * from "./flex";
 export * from "./icon";
 export * from "./image";
