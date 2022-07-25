@@ -62,6 +62,7 @@ export const Career: React.FunctionComponent<CareerProps> = () => {
         alignItems: "center",
         py: 4,
         ml: [0, null, "100px"],
+        mt: [8, 25],
         p: `${CONTENT_PADDING}px`,
       }}
     >

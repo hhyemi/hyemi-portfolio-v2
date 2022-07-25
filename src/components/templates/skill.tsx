@@ -1,29 +1,38 @@
 import React from "react";
 
 import {
-  Box, Card, Flex, Text, TextProps,
+  Box, Flex, Text,
 } from "@components/atoms";
+import { List } from "@components/molecules";
 import { useScrollFadeIn } from "@hooks";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 
-const SkillTitle = (props: TextProps) => <Text
-  variant={["s1", "h5"]}
-  appearance={"gray"}
-  sx={{ flex: 1 }}
-  {...props}
-/>;
-
-const SkillText = (props: TextProps) => <Text
-  variant={["s1", "h5"]}
-  sx={{ lineHeight: 2 }}
-  {...props}
-/>;
-
 export type SkillProps = {};
+
+const frontItems = {
+  title: "🛠 FRONT-END",
+  items: [
+    "•   JavaScript, TypeScript, Html",
+    "•   React.js, Next.js",
+    "•   MobX, Redux, Redux-saga, Apollo",
+    "•   Css, Styled-component, Theme ui",
+  ],
+};
+
+const backItems = {
+  title: "⚙️ BACK-END",
+  items: [
+    "•   Java, Spring",
+    "•   Restful API, Axios",
+    "•   Node, NPM, Express",
+    "•   Oracle, MySQL, PostgreSQL",
+  ],
+};
 
 export const Skill: React.FunctionComponent<SkillProps> = () => {
   const { ref: scrollTitleRef, style: scrollTitleStyle } = useScrollFadeIn("up", 1, 0);
-  const { ref: scrollContentRef, style: scrollContentStyle } = useScrollFadeIn("up", 1.5, 0.3);
+  const { ref: scrollFirstContentRef, style: scrollFirstContentStyle } = useScrollFadeIn("up", 1.5, 0);
+  const { ref: scrollSecondContentRef, style: scrollSecondContentStyle } = useScrollFadeIn("up", 1.5, 0);
 
   return (
     <Flex
@@ -49,45 +58,12 @@ export const Skill: React.FunctionComponent<SkillProps> = () => {
           }}>
           {"SKILLS"}
         </Text>
-        <Card ref={scrollContentRef} sx={{
-          p: 4, pb: 5,
-          ...scrollContentStyle,
-        }}>
-          <Flex sx={{ flexDirection: ["column", null, "row"], justifyContent: "space-between" }}>
-            <SkillTitle>{"FRONT-END"}</SkillTitle>
-            <Box sx={{ flex: 2 }}>
-              <SkillText>
-                {"•   JavaScript, TypeScript, Html"}
-              </SkillText>
-              <SkillText>
-                {"•   React.js, Next.js"}
-              </SkillText>
-              <SkillText>
-                {"•   MobX, Redux, Redux-saga, Apollo"}
-              </SkillText>
-              <SkillText>
-                {"•   Css, Styled-component, Theme ui"}
-              </SkillText>
-            </Box>
-          </Flex>
-          <Flex sx={{ flexDirection: ["column", null, "row"], justifyContent: "space-between", mt: 3 }}>
-            <SkillTitle>{"BACK-END"}</SkillTitle>
-            <Box sx={{ flex: 2 }}>
-              <SkillText>
-                {"•   Java, Spring"}
-              </SkillText>
-              <SkillText>
-                {"•   Restful API, Axios"}
-              </SkillText>
-              <SkillText>
-                {"•   Node, NPM, Express"}
-              </SkillText>
-              <SkillText>
-                {"•   Oracle, MySQL, PostgreSQL"}
-              </SkillText>
-            </Box>
-          </Flex>
-        </Card>
+        <Box ref={scrollFirstContentRef} sx={{ ...scrollFirstContentStyle }}>
+          <List list={frontItems}/>
+        </Box>
+        <Box ref={scrollSecondContentRef} sx={{ ...scrollSecondContentStyle }}>
+          <List list={backItems} sx={{ mt: 3 }}/>
+        </Box>
       </Box>
     </Flex>
   );
