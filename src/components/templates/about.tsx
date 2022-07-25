@@ -28,7 +28,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
   ];
 
   const { ref: scrollTitleRef, style: scrollTitleStyle } = useScrollFadeIn("up", 1, 0);
-  const { ref: scrollContnetRef, style: scrollContnetStyle } = useScrollFadeIn("up", 1.5, 0.3);
+  const { ref: scrollContentRef, style: scrollContentStyle } = useScrollFadeIn("up", 1.5, 0.3);
 
   return (
     <Flex
@@ -56,7 +56,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
           {"ABOUT ME"}
         </Text>
 
-        <Box ref={scrollContnetRef} sx={{ ...scrollContnetStyle }}>
+        <Box ref={scrollContentRef} sx={{ ...scrollContentStyle }}>
           <Flex sx={{ flexDirection: ["column", null, "row"]}}>
             <Image
               src={"/images/profile.jpeg"}

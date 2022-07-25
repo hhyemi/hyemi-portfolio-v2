@@ -23,7 +23,7 @@ export type SkillProps = {};
 
 export const Skill: React.FunctionComponent<SkillProps> = () => {
   const { ref: scrollTitleRef, style: scrollTitleStyle } = useScrollFadeIn("up", 1, 0);
-  const { ref: scrollContnetRef, style: scrollContnetStyle } = useScrollFadeIn("up", 1.5, 0.3);
+  const { ref: scrollContentRef, style: scrollContentStyle } = useScrollFadeIn("up", 1.5, 0.3);
 
   return (
     <Flex
@@ -49,9 +49,9 @@ export const Skill: React.FunctionComponent<SkillProps> = () => {
           }}>
           {"SKILLS"}
         </Text>
-        <Card ref={scrollContnetRef} sx={{
+        <Card ref={scrollContentRef} sx={{
           p: 4, pb: 5,
-          ...scrollContnetStyle,
+          ...scrollContentStyle,
         }}>
           <Flex sx={{ flexDirection: ["column", null, "row"], justifyContent: "space-between" }}>
             <SkillTitle>{"FRONT-END"}</SkillTitle>
