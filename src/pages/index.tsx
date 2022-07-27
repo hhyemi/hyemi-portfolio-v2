@@ -2,7 +2,7 @@ import React from "react";
 
 import { Box } from "@components/atoms";
 import {
-  About, Career, Home, LayoutMain, Projects, Skill,
+  About, Career, Home, LayoutMain, Projects, Skills,
 } from "@components/templates";
 import styled from "@emotion/styled";
 import type { NextPage } from "next";
@@ -27,7 +27,7 @@ const Main: NextPage = () => {
         <Box className={"container"}>
           <Home/>
           <About/>
-          <Skill/>
+          <Skills/>
           <Career/>
           <Projects/>
         </Box>

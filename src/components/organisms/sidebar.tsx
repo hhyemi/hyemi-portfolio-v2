@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 
 import {
-  Box, Flex, Text, TextProps,
+  Box, Flex, StyledLink, Text, TextProps,
 } from "@components/atoms";
 import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@themes/main";
 
@@ -47,16 +47,28 @@ export const Sidebar: React.FunctionComponent<DrawerProps> = () => {
     <ContainerFlex>
       <Box sx={{ position: "fixed", cursor: "pointer" }}>
         <Box ref={aboutElement}>
-          <Title>{"ABOUT"}</Title>
+          <StyledLink
+            href={"#about"}>
+            <Title>{"ABOUT"}</Title>
+          </StyledLink>
         </Box>
         <Box ref={skillsElement}>
-          <Title>{"SKILLS"}</Title>
+          <StyledLink
+            href={"#skills"}>
+            <Title>{"SKILLS"}</Title>
+          </StyledLink>
         </Box>
         <Box ref={careerElement}>
-          <Title>{"CAREER"}</Title>
+          <StyledLink
+            href={"#career"}>
+            <Title>{"CAREER"}</Title>
+          </StyledLink>
         </Box>
         <Box ref={projectsElement}>
-          <Title>{"PROJECTS"}</Title>
+          <StyledLink
+            href={"#projects"}>
+            <Title>{"PROJECTS"}</Title>
+          </StyledLink>
         </Box>
 
       </Box>

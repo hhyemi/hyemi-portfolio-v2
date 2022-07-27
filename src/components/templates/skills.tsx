@@ -1,13 +1,13 @@
 import React from "react";
 
 import {
-  Box, Flex, Responsive, Text,
+  Box, Flex, Text,
 } from "@components/atoms";
 import { List } from "@components/molecules";
 import { useScrollFadeIn } from "@hooks";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 
-export type SkillProps = {};
+export type SkillsProps = {};
 
 const frontItems = {
   title: "🛠 FRONT-END",
@@ -29,12 +29,13 @@ const backItems = {
   ],
 };
 
-export const Skill: React.FunctionComponent<SkillProps> = () => {
+export const Skills: React.FunctionComponent<SkillsProps> = () => {
   const { ref: scrollTitleRef, style: scrollTitleStyle } = useScrollFadeIn("up", 1, 0);
   const { ref: scrollContentRef, style: scrollContentStyle } = useScrollFadeIn("up", 1.5, 0);
 
   return (
     <Flex
+      id={"skills"}
       sx={{
         height: "100vh",
         justifyContent: "center",

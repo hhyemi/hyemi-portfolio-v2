@@ -3,7 +3,7 @@ import React, { useCallback, useRef } from "react";
 import {
   Box, Button, Flex, FlexProps, Image, Text,
 } from "@components/atoms";
-import { Cursor } from "@components/molecules/cursor";
+import { Cursor } from "@components/molecules";
 import { useScrollFadeIn } from "@hooks";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 import { useRouter } from "next/dist/client/router";

@@ -32,6 +32,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
 
   return (
     <Flex
+      id={"about"}
       sx={{
         height: "100vh",
         justifyContent: "center",

@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 
+import { Box } from "@components/atoms";
 import { SectionProject } from "@components/molecules";
-import { useScrollFadeIn } from "@hooks";
 
 export type ProjectsProps = {};
 
@@ -31,7 +31,7 @@ const projectItems = [
 
 export const Projects: React.FunctionComponent<ProjectsProps> = () => {
   return (
-    <Fragment>
+    <Box id={"projects"}>
       {projectItems.map((item) => {
         return (
           <SectionProject
@@ -44,6 +44,6 @@ export const Projects: React.FunctionComponent<ProjectsProps> = () => {
           />
         );
       })}
-    </Fragment>
+    </Box>
   );
 };
