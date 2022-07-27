@@ -1,7 +1,7 @@
 import React from "react";
 
 import {
-  Box, Flex, Text,
+  Box, Flex, Responsive, Text,
 } from "@components/atoms";
 import { List } from "@components/molecules";
 import { useScrollFadeIn } from "@hooks";
@@ -31,8 +31,7 @@ const backItems = {
 
 export const Skill: React.FunctionComponent<SkillProps> = () => {
   const { ref: scrollTitleRef, style: scrollTitleStyle } = useScrollFadeIn("up", 1, 0);
-  const { ref: scrollFirstContentRef, style: scrollFirstContentStyle } = useScrollFadeIn("up", 1.5, 0);
-  const { ref: scrollSecondContentRef, style: scrollSecondContentStyle } = useScrollFadeIn("up", 1.5, 0);
+  const { ref: scrollContentRef, style: scrollContentStyle } = useScrollFadeIn("up", 1.5, 0);
 
   return (
     <Flex
@@ -58,12 +57,10 @@ export const Skill: React.FunctionComponent<SkillProps> = () => {
           }}>
           {"SKILLS"}
         </Text>
-        <Box ref={scrollFirstContentRef} sx={{ ...scrollFirstContentStyle }}>
-          <List list={frontItems}/>
-        </Box>
-        <Box ref={scrollSecondContentRef} sx={{ ...scrollSecondContentStyle }}>
-          <List list={backItems} sx={{ mt: 3 }}/>
-        </Box>
+        <Flex ref={scrollContentRef} sx={{ justifyContent: "center", ...scrollContentStyle }}>
+          <List list={frontItems} sx={{ width: "50%" }}/>
+          <List list={backItems} sx={{ width: "50%" }}/>
+        </Flex>
       </Box>
     </Flex>
   );

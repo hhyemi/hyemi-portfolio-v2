@@ -456,7 +456,7 @@ export const theme = getTheme({
       variant: "buttons.default-outlined",
       color: "text-primary",
       backgroundColor: "white-500",
-      borderColor: "grey-200",
+      borderColor: "grey-400",
     },
     "primary-filled": {
       variant: "buttons.default-filled",

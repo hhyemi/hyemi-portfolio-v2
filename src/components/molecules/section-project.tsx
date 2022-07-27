@@ -3,9 +3,12 @@ import React, { useCallback } from "react";
 import {
   Box, Button, Flex, FlexProps, Image, Text,
 } from "@components/atoms";
+import { useScrollFadeIn } from "@hooks";
+import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 import { useRouter } from "next/dist/client/router";
 
 export type SectionProjectProps = FlexProps & {
+  menuTitle: string;
   image: string;
   title: string;
   subtitle: string;
@@ -13,9 +16,12 @@ export type SectionProjectProps = FlexProps & {
 };
 
 export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
-  image, title, subtitle, page, ...props
+  menuTitle, image, title, subtitle, page,
 }) => {
   const router = useRouter();
+
+  const { ref: scrollTitleRef, style: scrollTitleStyle } = useScrollFadeIn("up", 1, 0);
+  const { ref: scrollContentRef, style: scrollContentStyle } = useScrollFadeIn("up", 1.5, 0.3);
 
   const handleClick = useCallback(() => {
     router.push(page);
@@ -28,27 +34,53 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
         justifyContent: "center",
         alignSelf: "center",
         alignItems: "center",
-        flexDirection: ["column", null, "row"],
+        py: 4,
+        ml: [0, null, "100px"],
+        p: `${CONTENT_PADDING}px`,
       }}
-      {...props}
     >
-      <Image src={image} sx={{ width: ["360px", null, "460px"], mb: [4, null, 0]}}/>
-      <Flex sx={{
-        ml: [0, null, 5], alignSelf: "center", flexDirection: "column", alignItems: ["center", null, "flex-start"],
-      }}>
-        <Text variant={["h5", "h4", "h3", "h2"]} sx={{ fontWeight: "bold", mb: 1 }}>{title}</Text>
-        <Text variant={["s2", "s1", "s1"]}>
-          {subtitle}
-        </Text>
-        <Button
-          variant={"grey"}
-          appearance={"outlined"}
-          onClick={handleClick}
-          sx={{ mt: 3 }}
-        >
-          {"DETAILS"}
-        </Button>
-      </Flex>
+      <Box sx={{ width: SECTION_WIDTH }}>
+        <Box>
+          <Text
+            ref={scrollTitleRef}
+            variant={["h3", "h2", "h1"]}
+            sx={{
+              pb: 10,
+              fontFamily: "title",
+              letterSpacing: "0.1em",
+              ...scrollTitleStyle,
+            }}>
+            {menuTitle}
+          </Text>
+          <Flex
+            ref={scrollContentRef}
+            sx={{
+              justifyContent: "center",
+              alignSelf: "center",
+              alignItems: "center",
+              flexDirection: ["column", null, "row"],
+              ...scrollContentStyle,
+            }}>
+            <Image src={image} sx={{ width: ["360px", null, "460px"], mb: [4, null, 0]}}/>
+            <Flex sx={{
+              ml: [0, null, 5], alignSelf: "center", flexDirection: "column", alignItems: ["center", null, "flex-start"],
+            }}>
+              <Text variant={["h5", "h4", "h3", "h2"]} sx={{ fontWeight: "bold", mb: 1 }}>{title}</Text>
+              <Text variant={["s2", "s1", "s1"]}>
+                {subtitle}
+              </Text>
+              <Button
+                variant={"white"}
+                appearance={"outlined"}
+                onClick={handleClick}
+                sx={{ mt: 3 }}
+              >
+                {"DETAILS"}
+              </Button>
+            </Flex>
+          </Flex>
+        </Box>
+      </Box>
     </Flex>
   );
 };

@@ -46,15 +46,6 @@ export const LayoutMain: React.FunctionComponent<LayoutMainProps> = ({
       <Navbar/>
       <MainFlex>
         <ContentFlex>
-          <Image
-            src={"/images/home-background.jpg"}
-            sx={{
-              position: "absolute",
-              width: ["100%", null, "87%"],
-              minWidth: ["100%", null, "87%"],
-              height: "100%",
-              right: 0,
-            }}/>
           <Responsive lgAndUp>
             <Sidebar/>
           </Responsive>
