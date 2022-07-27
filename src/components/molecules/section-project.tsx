@@ -56,14 +56,15 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
           </Text>
           <Flex
             ref={scrollContentRef}
-            sx={{
-              justifyContent: "center",
-              alignSelf: "center",
-              alignItems: "center",
-              flexDirection: ["column", null, "row"],
-              ...scrollContentStyle,
-            }}>
-            <Box ref={element}>
+            sx={{ ...scrollContentStyle }}>
+            <Flex
+              ref={element}
+              sx={{
+                justifyContent: "center",
+                alignSelf: "center",
+                alignItems: "center",
+                flexDirection: ["column", null, "row"],
+              }}>
               <Image src={image} sx={{ width: ["360px", null, "460px"], mb: [4, null, 0]}}/>
               <Flex sx={{
                 ml: [0, null, 5], alignSelf: "center", flexDirection: "column", alignItems: ["center", null, "flex-start"],
@@ -81,7 +82,7 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
                   {"DETAILS"}
                 </Button>
               </Flex>
-            </Box>
+            </Flex>
           </Flex>
         </Box>
 
