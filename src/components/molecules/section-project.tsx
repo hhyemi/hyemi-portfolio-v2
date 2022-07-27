@@ -1,8 +1,9 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useRef } from "react";
 
 import {
   Box, Button, Flex, FlexProps, Image, Text,
 } from "@components/atoms";
+import { Cursor } from "@components/molecules/cursor";
 import { useScrollFadeIn } from "@hooks";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 import { useRouter } from "next/dist/client/router";
@@ -19,6 +20,7 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
   menuTitle, image, title, subtitle, page,
 }) => {
   const router = useRouter();
+  const element = useRef<HTMLDivElement>(null);
 
   const { ref: scrollTitleRef, style: scrollTitleStyle } = useScrollFadeIn("up", 1, 0);
   const { ref: scrollContentRef, style: scrollContentStyle } = useScrollFadeIn("up", 1.5, 0.3);
@@ -61,25 +63,29 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
               flexDirection: ["column", null, "row"],
               ...scrollContentStyle,
             }}>
-            <Image src={image} sx={{ width: ["360px", null, "460px"], mb: [4, null, 0]}}/>
-            <Flex sx={{
-              ml: [0, null, 5], alignSelf: "center", flexDirection: "column", alignItems: ["center", null, "flex-start"],
-            }}>
-              <Text variant={["h5", "h4", "h3", "h2"]} sx={{ fontWeight: "bold", mb: 1 }}>{title}</Text>
-              <Text variant={["s2", "s1", "s1"]}>
-                {subtitle}
-              </Text>
-              <Button
-                variant={"white"}
-                appearance={"outlined"}
-                onClick={handleClick}
-                sx={{ mt: 3 }}
-              >
-                {"DETAILS"}
-              </Button>
-            </Flex>
+            <Box ref={element}>
+              <Image src={image} sx={{ width: ["360px", null, "460px"], mb: [4, null, 0]}}/>
+              <Flex sx={{
+                ml: [0, null, 5], alignSelf: "center", flexDirection: "column", alignItems: ["center", null, "flex-start"],
+              }}>
+                <Text variant={["h5", "h4", "h3", "h2"]} sx={{ fontWeight: "bold", mb: 1 }}>{title}</Text>
+                <Text variant={["s2", "s1", "s1"]}>
+                  {subtitle}
+                </Text>
+                <Button
+                  variant={"white"}
+                  appearance={"outlined"}
+                  onClick={handleClick}
+                  sx={{ mt: 3 }}
+                >
+                  {"DETAILS"}
+                </Button>
+              </Flex>
+            </Box>
           </Flex>
         </Box>
+
+        <Cursor elements={[element]} hasBackgroundImage={true}/>
       </Box>
     </Flex>
   );

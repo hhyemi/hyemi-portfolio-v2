@@ -1,8 +1,9 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useRef } from "react";
 
 import {
-  Box, Button, Card, CardProps, Divider, Flex, FlexProps, Image, StyledLink, Text, TextProps,
+  Box, Button, Card, CardProps, Divider, Flex, FlexProps, Image, Text, TextProps,
 } from "@components/atoms";
+import { Cursor } from "@components/molecules/cursor";
 import { useScrollFadeIn } from "@hooks";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 import { useRouter } from "next/dist/client/router";
@@ -59,6 +60,7 @@ export const SectionCareer: React.FunctionComponent<SectionCareerProps> = ({
   page,
 }) => {
   const router = useRouter();
+  const element = useRef<HTMLDivElement>(null);
 
   const { ref: scrollTitleRef, style: scrollTitleStyle } = useScrollFadeIn("up", 1, 0);
   const { ref: scrollContentRef, style: scrollContentStyle } = useScrollFadeIn("up", 1.5, 0.3);
@@ -92,8 +94,8 @@ export const SectionCareer: React.FunctionComponent<SectionCareerProps> = ({
           {menuTitle}
         </Text>
         <Box ref={scrollContentRef} sx={{ ...scrollContentStyle }}>
-          <CareerCard onClick={handleClick}>
-            <Box>
+          <CareerCard onClick={handleClick} sx={{ cursor: "pointer" }}>
+            <Box ref={element}>
               <Flex sx={{ alignItems: "flex-start", mb: 1 }}>
                 <Image src={image} sx={{ width: ["80px", "120px"]}}/>
                 <Text variant={["s1", "h5", "h4"]} sx={{ ml: 1, fontWeight: "bold" }}>{title}</Text>
@@ -120,21 +122,23 @@ export const SectionCareer: React.FunctionComponent<SectionCareerProps> = ({
                   </CareerFlex>
                 </Box>
               </Box>
+              <Flex sx={{ justifyContent: "center" }}>
+                <Button
+                  variant={"white"}
+                  appearance={"outlined"}
+                  onClick={handleClick}
+                  sx={{ mt: 3 }}
+                >
+                  {"DETAILS"}
+                </Button>
+              </Flex>
             </Box>
-            <Flex sx={{ justifyContent: "center" }}>
-              <Button
-                variant={"white"}
-                appearance={"outlined"}
-                onClick={handleClick}
-                sx={{ mt: 3 }}
-              >
-                {"DETAILS"}
-              </Button>
-            </Flex>
           </CareerCard>
         </Box>
 
+        <Cursor elements={[element]} hasBackgroundImage={true}/>
       </Box>
+
     </Flex>
   );
 };

@@ -19,7 +19,7 @@ export const Home: React.FunctionComponent<HomeProps> = () => {
       height: "100vh",
       width: "100vw",
       p: [`${CONTENT_PADDING}px`],
-      backgroundImage: "url(\"/images/home-background.jpg\")",
+      backgroundImage: "url('/images/home-background.jpg')",
       backgroundSize: ["100% 100%", null, "87% 100%"],
       backgroundRepeat: "no-repeat",
       ml: [0, null, SIDEBAR_WIDTH],
