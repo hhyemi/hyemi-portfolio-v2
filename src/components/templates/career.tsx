@@ -1,6 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
 
-import { Box } from "@components/atoms";
 import { SectionCareer } from "@components/molecules";
 
 export type CareerProps = {};
@@ -36,11 +35,12 @@ const careerItems = [
 
 export const Career: React.FunctionComponent<CareerProps> = () => {
   return (
-    <Box id={"career"}>
-      {careerItems.map((item) => {
+    <Fragment>
+      {careerItems.map((item, index) => {
         return (
           <SectionCareer
             key={item.title}
+            index={index}
             menuTitle={item.menuTitle}
             image={item.image}
             title={item.title}
@@ -51,6 +51,6 @@ export const Career: React.FunctionComponent<CareerProps> = () => {
           />
         );
       })}
-    </Box>
+    </Fragment>
   );
 };

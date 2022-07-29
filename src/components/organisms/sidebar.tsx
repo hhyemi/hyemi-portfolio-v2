@@ -52,25 +52,25 @@ export const Sidebar: React.FunctionComponent<DrawerProps> = () => {
         <Box sx={{ position: "fixed", cursor: "pointer" }}>
           <Box ref={aboutElement}>
             <StyledLink
-              href={"#about"}>
+              href={"/#about"}>
               <Title>{"ABOUT"}</Title>
             </StyledLink>
           </Box>
           <Box ref={skillsElement}>
             <StyledLink
-              href={"#skills"}>
+              href={"/#skills"}>
               <Title>{"SKILLS"}</Title>
             </StyledLink>
           </Box>
           <Box ref={careerElement}>
             <StyledLink
-              href={"#career"}>
+              href={"/#career"}>
               <Title>{"CAREER"}</Title>
             </StyledLink>
           </Box>
           <Box ref={projectsElement}>
             <StyledLink
-              href={"#projects"}>
+              href={"/#projects"}>
               <Title>{"PROJECTS"}</Title>
             </StyledLink>
           </Box>

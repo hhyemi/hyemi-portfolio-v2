@@ -317,10 +317,10 @@ export const theme = getTheme({
     l1: "0.625rem", // 10px
   },
   fonts: {
-    headline: "Noto Sans KR, sans-serif",
-    subtitle: "Noto Sans KR, sans-serif",
-    paragraph: "Noto Sans KR, sans-serif",
-    label: "Noto Sans KR, sans-serif",
+    headline: "NexonLv2Gothic, sans-serif",
+    subtitle: "NexonLv2Gothic, sans-serif",
+    paragraph: "NexonLv2Gothic, sans-serif",
+    label: "NexonLv2Gothic, sans-serif",
     title: "Montserrat, sans-serif",
   },
   fontWeights: {
@@ -347,7 +347,7 @@ export const theme = getTheme({
     h1: {
       fontFamily: "headline",
       fontSize: "h1",
-      fontWeight: "medium",
+      fontWeight: "regular",
       lineHeight: "headline",
       letterSpacing: "headline",
       color: "text-primary",
@@ -355,7 +355,7 @@ export const theme = getTheme({
     h2: {
       fontFamily: "headline",
       fontSize: "h2",
-      fontWeight: "medium",
+      fontWeight: "regular",
       lineHeight: "headline",
       letterSpacing: "headline",
       color: "text-primary",
@@ -363,7 +363,7 @@ export const theme = getTheme({
     h3: {
       fontFamily: "headline",
       fontSize: "h3",
-      fontWeight: "medium",
+      fontWeight: "regular",
       lineHeight: "headline",
       letterSpacing: "headline",
       color: "text-primary",
@@ -371,7 +371,7 @@ export const theme = getTheme({
     h4: {
       fontFamily: "headline",
       fontSize: "h4",
-      fontWeight: "medium",
+      fontWeight: "regular",
       lineHeight: "headline",
       letterSpacing: "headline",
       color: "text-primary",
@@ -379,7 +379,7 @@ export const theme = getTheme({
     h5: {
       fontFamily: "headline",
       fontSize: "h5",
-      fontWeight: "medium",
+      fontWeight: "regular",
       lineHeight: "headline",
       letterSpacing: "headline",
       color: "text-primary",
@@ -387,7 +387,7 @@ export const theme = getTheme({
     s1: {
       fontFamily: "subtitle",
       fontSize: "s1",
-      fontWeight: "medium",
+      fontWeight: "regular",
       lineHeight: "subtitle",
       letterSpacing: "subtitle",
       color: "text-primary",
@@ -395,7 +395,7 @@ export const theme = getTheme({
     s2: {
       fontFamily: "subtitle",
       fontSize: "s2",
-      fontWeight: "medium",
+      fontWeight: "regular",
       lineHeight: "subtitle",
       letterSpacing: "subtitle",
       color: "text-primary",

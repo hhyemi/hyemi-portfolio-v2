@@ -1,5 +1,5 @@
 import React, {
-  RefObject, useCallback, useEffect, useState,
+  RefObject, useCallback, useEffect, useMemo, useState,
 } from "react";
 
 import { Box, FlexProps } from "@components/atoms";
@@ -16,6 +16,8 @@ export const Cursor: React.FunctionComponent<CursorProps> = ({
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [linkHovered, setLinkHovered] = useState(false);
 
+  const scale = useMemo(() => hasBackgroundImage ? 2.5 : 2, [hasBackgroundImage]);
+
   const addEventListeners = useCallback(() => {
     document.addEventListener("mousemove", onMouseMove);
   }, []);
@@ -25,10 +27,6 @@ export const Cursor: React.FunctionComponent<CursorProps> = ({
   }, []);
 
   const handleLinkHoverEvents = useCallback(() => {
-    document.querySelectorAll("a").forEach((el) => {
-      el.addEventListener("mouseover", () => setLinkHovered(true));
-      el.addEventListener("mouseout", () => setLinkHovered(false));
-    });
     elements.map((el: RefObject<HTMLDivElement>) => {
       el?.current?.addEventListener("mouseover", () => setLinkHovered(true));
       el?.current?.addEventListener("mouseout", () => setLinkHovered(false));
@@ -52,8 +50,6 @@ export const Cursor: React.FunctionComponent<CursorProps> = ({
   const onMouseMove = (e: MouseEvent) => {
     setPosition({ x: e.clientX, y: e.clientY });
   };
-
-  const scale = hasBackgroundImage ? 2.5 : 2;
 
   return (
     <Box

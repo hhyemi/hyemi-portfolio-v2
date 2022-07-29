@@ -1,6 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
 
-import { Box } from "@components/atoms";
 import { SectionProject } from "@components/molecules";
 
 export type ProjectsProps = {};
@@ -31,11 +30,12 @@ const projectItems = [
 
 export const Projects: React.FunctionComponent<ProjectsProps> = () => {
   return (
-    <Box id={"projects"}>
-      {projectItems.map((item) => {
+    <Fragment>
+      {projectItems.map((item, index) => {
         return (
           <SectionProject
             key={item.title}
+            index={index}
             menuTitle={item.menuTitle}
             image={item.image}
             title={item.title}
@@ -44,6 +44,6 @@ export const Projects: React.FunctionComponent<ProjectsProps> = () => {
           />
         );
       })}
-    </Box>
+    </Fragment>
   );
 };

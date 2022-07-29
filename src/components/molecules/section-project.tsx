@@ -9,6 +9,7 @@ import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 import { useRouter } from "next/dist/client/router";
 
 export type SectionProjectProps = FlexProps & {
+  index: number;
   menuTitle: string;
   image: string;
   title: string;
@@ -17,7 +18,7 @@ export type SectionProjectProps = FlexProps & {
 };
 
 export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
-  menuTitle, image, title, subtitle, page,
+  index, menuTitle, image, title, subtitle, page,
 }) => {
   const router = useRouter();
   const element = useRef<HTMLDivElement>(null);
@@ -31,6 +32,7 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
 
   return (
     <Flex
+      id={index === 0 ? "projects" : undefined}
       sx={{
         height: "100vh",
         justifyContent: "center",
@@ -59,10 +61,12 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
             sx={{ ...scrollContentStyle }}>
             <Flex
               ref={element}
+              onClick={handleClick}
               sx={{
                 justifyContent: "center",
                 alignSelf: "center",
                 alignItems: "center",
+                cursor: "pointer",
                 flexDirection: ["column", null, "row"],
               }}>
               <Image src={image} sx={{ width: ["360px", null, "460px"], mb: [4, null, 0]}}/>
@@ -76,7 +80,6 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
                 <Button
                   variant={"white"}
                   appearance={"outlined"}
-                  onClick={handleClick}
                   sx={{ mt: 3 }}
                 >
                   {"DETAILS"}

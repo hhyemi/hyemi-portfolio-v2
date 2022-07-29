@@ -9,6 +9,7 @@ import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 import { useRouter } from "next/dist/client/router";
 
 export type SectionCareerProps = FlexProps & {
+  index: number;
   menuTitle: string;
   image: string;
   title: string;
@@ -51,6 +52,7 @@ const CareerCard = (props: CardProps) => <Card
 />;
 
 export const SectionCareer: React.FunctionComponent<SectionCareerProps> = ({
+  index,
   menuTitle,
   image,
   title,
@@ -71,6 +73,7 @@ export const SectionCareer: React.FunctionComponent<SectionCareerProps> = ({
 
   return (
     <Flex
+      id={index === 0 ? "career" : undefined}
       sx={{
         height: "100vh",
         justifyContent: "center",
