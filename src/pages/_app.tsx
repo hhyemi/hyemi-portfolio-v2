@@ -10,7 +10,6 @@ const App = ({ Component, pageProps }: AppProps) => {
     <Fragment>
       <Head>
         <title>{"HYEMI"}</title>
-        <link rel={"shortcut icon"} href={"images/favicon.png"}/>
       </Head>
       <ThemeProvider>
         <ResponsiveProvider>

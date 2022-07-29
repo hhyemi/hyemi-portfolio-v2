@@ -68,11 +68,11 @@ export const Cursor: React.FunctionComponent<CursorProps> = ({
         pointerEvents: "none",
         transition: "all 150ms ease",
         transitionProperty: "background-color, opacity, transform, mix-blend-mode",
-        zIndex: "9999",
+        zIndex: 99,
         mixBlendMode: hasBackgroundImage ? "inherit" : "difference",
         transform: linkHovered ? `translate(-50%, -50%) scale(${scale})` : "translate(-50%, -50%)",
         backgroundColor: linkHovered ? "#ffffff" : "black",
-        backgroundImage: hasBackgroundImage ? "url('images/add-plus.svg')" : undefined,
+        backgroundImage: hasBackgroundImage ? "url('images/plus.png')" : undefined,
         backgroundSize: "100%",
       }}
     />
