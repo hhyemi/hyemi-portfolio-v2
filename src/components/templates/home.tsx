@@ -19,9 +19,6 @@ export const Home: React.FunctionComponent<HomeProps> = () => {
       width: "100vw",
       p: [`${CONTENT_PADDING}px`],
       backgroundColor: "black",
-      // backgroundImage: "url('/images/home-background.jpg')",
-      // backgroundSize: ["100% 100%", null, "100% 100%"],
-      // backgroundRepeat: "no-repeat",
     }}>
       <Box
         ref={scrollRef}

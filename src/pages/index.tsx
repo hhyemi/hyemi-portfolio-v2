@@ -10,6 +10,7 @@ import type { NextPage } from "next";
 const StyledBox = styled.div`
     .container{ 
         scroll-behavior: smooth;
+        width: 100vw;
         height: 100vh;
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
