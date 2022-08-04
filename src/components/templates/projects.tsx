@@ -17,7 +17,7 @@ const projectItems = [
     image: "images/protected-dog.png",
     title: "보호할개 (유기견 보호 웹사이트)",
     subtitle: "반려견의 입양·분양, 스토리펀딩 , 관련정보 및 상품 판매를 \n 회원들에게 제공함으로써 유기견 없는 사회를 실현하고자 하는 사이트 🐶 ❤️",
-    page: "/projects/protected",
+    page: "/projects/protected-dog",
   },
   {
     menuTitle: "PROJECTS-3",
