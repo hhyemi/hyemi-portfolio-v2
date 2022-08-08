@@ -1,46 +1,11 @@
 import React, { Fragment } from "react";
 
 import {
-  Box, BoxProps, Card, Flex, FlexProps, Text, TextProps,
+  Box, Flex, FlexProps, Text,
 } from "@components/atoms";
-import { IconButton } from "@components/molecules";
-
-const Title = (props: TextProps) => <Text
-  appearance={"gray"}
-  variant={["h5", "h4"]}
-  sx={{ mb: 2, fontWeight: "bold" }}
-  {...props}
-/>;
-
-const ContentBox = (props: BoxProps) => <Box
-  sx={{ mb: 25 }}
-  {...props}
-/>;
-
-const CardTitle = (props: TextProps) => <Text
-  variant={["s2", "s1"]}
-  appearance={"gray"}
-  sx={{
-    width: "100px",
-    minWidth: "100px",
-    mt: "5px",
-  }}
-  {...props}
-/>;
-
-const CardFlex = (props: FlexProps) => <Flex
-  sx={{
-    flexDirection: ["column", null, "row", null],
-    mt: 2,
-  }}
-  {...props}
-/>;
-
-const ContentText = (props: TextProps) => <Text
-  variant={["s2", "s1"]}
-  sx={{ lineHeight: 2 }}
-  {...props}
-/>;
+import { CardList, IconButton } from "@components/molecules";
+import { ContentText, Title } from "@components/templates";
+import { CONTENT_MARGIN_BOTTOM } from "@themes/main";
 
 export type ProjectIntroduceProps = FlexProps & {
   title: string;
@@ -77,18 +42,10 @@ export const ProjectIntroduce: React.FunctionComponent<ProjectIntroduceProps> = 
           </Text>
         </Flex>
 
-        <Card sx={{
-          pt: 3, pb: 5, px: 3, mb: 6,
-        }}>
-          <CardFlex>
-            <CardTitle>{"개발기간"}</CardTitle>
-            <ContentText>{period}</ContentText>
-          </CardFlex>
-          <CardFlex>
-            <CardTitle>{"개발인원"}</CardTitle>
-            <ContentText>{developer}</ContentText>
-          </CardFlex>
-        </Card>
+        <CardList items={[
+          { title: "개발기간", value: period },
+          { title: "개발인원", value: developer },
+        ]}/>
 
         <Flex sx={{ justifyContent: "center" }}>
           {iconItems.map((item) => {
@@ -98,31 +55,31 @@ export const ProjectIntroduce: React.FunctionComponent<ProjectIntroduceProps> = 
           })}
         </Flex>
       </Box>
-      <ContentBox>
+      <Box sx={{ mb: CONTENT_MARGIN_BOTTOM }}>
         <Title>
           {"프로젝트소개"}
         </Title>
         <Flex sx={{ justifyContent: "center", mt: 3 }}>
           <Box>
-            <Text variant={["s1", null, "h5"]} sx={{ justifyContent: "flex-start", lineHeight: 2.2 }}>
+            <ContentText sx={{ justifyContent: "flex-start", lineHeight: 2.2 }}>
               {projectIntroduce}
-            </Text>
+            </ContentText>
           </Box>
         </Flex>
-      </ContentBox>
+      </Box>
 
-      <ContentBox>
+      <Box sx={{ mb: CONTENT_MARGIN_BOTTOM }}>
         <Title>
           {"기능소개"}
         </Title>
         <Flex sx={{ justifyContent: "center", mt: 3 }}>
           <Box>
-            <Text variant={["s1", null, "h5"]} sx={{ justifyContent: "flex-start", lineHeight: 2.2, alignSelf: "center" }}>
+            <ContentText sx={{ justifyContent: "flex-start", lineHeight: 2.2, alignSelf: "center" }}>
               {functionItems.map(item => `${item}\n`)}
-            </Text>
+            </ContentText>
           </Box>
         </Flex>
-      </ContentBox>
+      </Box>
     </Fragment>
   );
 };

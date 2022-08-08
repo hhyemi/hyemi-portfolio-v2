@@ -14,6 +14,8 @@ export const CONTENT_PADDING = 32;
 export const SM_CONTENT_TOP = SM_TOP_NAV_HEIGHT + CONTENT_PADDING;
 export const MD_AND_UP_CONTENT_TOP = MD_AND_UP_TOP_NAV_HEIGHT + CONTENT_PADDING;
 
+export const CONTENT_MARGIN_BOTTOM = 25;
+
 type TransparentPalette = Record<
 "primary-500-8" | "primary-500-16" | "primary-500-24" | "primary-500-32" | "primary-500-40" | "primary-500-48" |
 "primary-500-56" | "primary-500-64" | "primary-500-72" | "primary-500-80" | "primary-500-88" | "primary-500-96" |

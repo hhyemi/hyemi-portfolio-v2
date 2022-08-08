@@ -1,20 +1,10 @@
 import React, { Fragment } from "react";
 
 import {
-  Box, BoxProps, FlexProps, Image, Text, TextProps,
+  Box, FlexProps, Image, Text,
 } from "@components/atoms";
-
-const Title = (props: TextProps) => <Text
-  appearance={"gray"}
-  variant={["h5", "h4"]}
-  sx={{ mb: 2, fontWeight: "bold" }}
-  {...props}
-/>;
-
-const ContentBox = (props: BoxProps) => <Box
-  sx={{ mb: 25 }}
-  {...props}
-/>;
+import { Title } from "@components/templates";
+import { CONTENT_MARGIN_BOTTOM } from "@themes/main";
 
 export type ProjectScreensProps = FlexProps & {
   screenItems: {title: string;src: string}[];
@@ -24,7 +14,7 @@ export const ProjectScreens: React.FunctionComponent<ProjectScreensProps> = ({
   screenItems,
 }) => {
   return (
-    <ContentBox>
+    <Box sx={{ mb: CONTENT_MARGIN_BOTTOM }}>
       <Title>
         {"화면소개"}
       </Title>
@@ -38,6 +28,6 @@ export const ProjectScreens: React.FunctionComponent<ProjectScreensProps> = ({
           );
         })}
       </Box>
-    </ContentBox>
+    </Box>
   );
 };

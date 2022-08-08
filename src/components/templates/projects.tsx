@@ -1,8 +1,22 @@
 import React, { Fragment } from "react";
 
+import { Text, TextProps } from "@components/atoms";
 import { SectionProject } from "@components/molecules";
 
 export type ProjectsProps = {};
+
+export const Title = (props: TextProps) => <Text
+  appearance={"gray"}
+  variant={["h5", "h3"]}
+  sx={{ mb: 2, fontWeight: "bold" }}
+  {...props}
+/>;
+
+export const ContentText = (props: TextProps) => <Text
+  variant={["s1", null, "h5"]}
+  sx={{ lineHeight: 2 }}
+  {...props}
+/>;
 
 const projectItems = [
   {

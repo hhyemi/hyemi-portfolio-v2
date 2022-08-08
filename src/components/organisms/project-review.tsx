@@ -1,26 +1,8 @@
 import React from "react";
 
-import {
-  Box, BoxProps, FlexProps, Text, TextProps,
-} from "@components/atoms";
-
-const Title = (props: TextProps) => <Text
-  appearance={"gray"}
-  variant={["h5", "h4"]}
-  sx={{ mb: 2, fontWeight: "bold" }}
-  {...props}
-/>;
-
-const ContentBox = (props: BoxProps) => <Box
-  sx={{ mb: 25 }}
-  {...props}
-/>;
-
-const ContentText = (props: TextProps) => <Text
-  variant={["s2", "s1"]}
-  sx={{ lineHeight: 2 }}
-  {...props}
-/>;
+import { Box, FlexProps } from "@components/atoms";
+import { ContentText, Title } from "@components/templates";
+import { CONTENT_MARGIN_BOTTOM } from "@themes/main";
 
 export type ProjectReviewProps = FlexProps & {
   reviewItems: string[];
@@ -32,8 +14,7 @@ export const ProjectReview: React.FunctionComponent<ProjectReviewProps> = ({
   retrospectItems,
 }) => {
   return (
-
-    <ContentBox>
+    <Box sx={{ mb: CONTENT_MARGIN_BOTTOM }}>
       <Box sx={{ mb: 10 }}>
         <Title>
           {"후기"}
@@ -53,6 +34,6 @@ export const ProjectReview: React.FunctionComponent<ProjectReviewProps> = ({
           {retrospectItems.map(item => `${item}\n`)}
         </ContentText>
       </Box>
-    </ContentBox>
+    </Box>
   );
 };

@@ -4,11 +4,11 @@ import {
   Box, Flex, FlexProps, Image,
 } from "@components/atoms";
 
-export type ProjectHeaderProps = FlexProps & {
+export type ImageHeaderProps = FlexProps & {
   src: string;
 };
 
-export const ProjectHeader: React.FunctionComponent<ProjectHeaderProps> = ({
+export const ImageHeader: React.FunctionComponent<ImageHeaderProps> = ({
   src,
 }) => {
   return (

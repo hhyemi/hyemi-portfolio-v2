@@ -1,8 +1,9 @@
 import React from "react";
 
 import { Box, Flex } from "@components/atoms";
+import { SectionSkills } from "@components/molecules";
 import {
-  ProjectHeader, ProjectIntroduce, ProjectReview, ProjectScreens, ProjectSkills, SIDEBAR_WIDTH,
+  ImageHeader, ProjectIntroduce, ProjectReview, ProjectScreens, SIDEBAR_WIDTH,
 } from "@components/organisms";
 import { LayoutMain } from "@components/templates";
 import type { NextPage } from "next";
@@ -57,7 +58,7 @@ const ProtectedDog: NextPage = () => {
     <LayoutMain>
       <Box>
 
-        <ProjectHeader src={"/images/protected-main.png"}/>
+        <ImageHeader src={"/images/protected-main.png"}/>
 
         <Flex
           sx={{
@@ -81,7 +82,7 @@ const ProtectedDog: NextPage = () => {
               functionItems={functionItems}
             />
 
-            <ProjectSkills frontItems={frontItems} backItems={backItems}/>
+            <SectionSkills frontItems={frontItems} backItems={backItems}/>
 
             <ProjectScreens screenItems={screenItems}/>
 
