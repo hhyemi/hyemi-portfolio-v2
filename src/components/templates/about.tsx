@@ -9,7 +9,7 @@ import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 export type AboutProps = {};
 
 const AboutText = (props: TextProps) => <Text
-  variant={["s2", "s1", "s2", "h5"]}
+  variant={["p1", "s2", null, "s1"]}
   sx={{
     width: "112px",
     lineHeight: 1.8,
@@ -69,7 +69,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
                 mb: [3, 5, 0],
               }}/>
             <Box>
-              <Text variant={["s2", "s1", "s2", "h5"]} sx={{ width: "auto", lineHeight: 1.8, mb: 2 }}>
+              <Text variant={["p1", "s2", null, "s1"]} sx={{ width: "auto", lineHeight: 1.8, mb: 2 }}>
                 {"안녕하세요 ☕️ 🐈 \n"}
                 {"Java Spring과 javaScript로 풀스택으로 일한 경험과 \n React를 사용하는 프론트엔드로 근무한 경험이 있는 "}
                 {<b>{"3년차 개발자"}</b>}

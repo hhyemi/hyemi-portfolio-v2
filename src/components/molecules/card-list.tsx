@@ -9,7 +9,7 @@ export type CardListProps = CardProps & {
 };
 
 const CardTitle = (props: TextProps) => <Text
-  variant={["s2", "s1"]}
+  variant={["p1", "s2", "s1"]}
   appearance={"gray"}
   sx={{
     width: "120px",
@@ -28,7 +28,7 @@ const CardFlex = (props: FlexProps) => <Flex
 />;
 
 const CardValue = (props: TextProps) => <Text
-  variant={["s2", "s1"]}
+  variant={["p1", "s2", "s1"]}
   sx={{ lineHeight: 2 }}
   {...props}
 />;
@@ -38,7 +38,7 @@ export const CardList: React.FunctionComponent<CardListProps> = ({
 }) => {
   return (
     <Card sx={{
-      pt: 3, pb: 5, px: 3, mb: 6,
+      pt: [0, 3], pb: [3, 5], px: [2, 3], mb: 6,
     }}>
       {items.map((item) => {
         return (

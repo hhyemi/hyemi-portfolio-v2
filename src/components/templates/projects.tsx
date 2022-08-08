@@ -7,13 +7,13 @@ export type ProjectsProps = {};
 
 export const Title = (props: TextProps) => <Text
   appearance={"gray"}
-  variant={["h5", "h3"]}
+  variant={["s1", "h5"]}
   sx={{ mb: 2, fontWeight: "bold" }}
   {...props}
 />;
 
 export const ContentText = (props: TextProps) => <Text
-  variant={["s1", null, "h5"]}
+  variant={["p1", "s2", null, "s1"]}
   sx={{ lineHeight: 2 }}
   {...props}
 />;

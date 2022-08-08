@@ -7,7 +7,7 @@ import { CONTENT_MARGIN_BOTTOM } from "@themes/main";
 
 const Title = (props: TextProps) => <Text
   appearance={"gray"}
-  variant={["h5", "h3"]}
+  variant={["s1", "h5"]}
   sx={{ mb: 2, fontWeight: "bold" }}
   {...props}
 />;
@@ -30,13 +30,13 @@ export const SectionSkills: React.FunctionComponent<SectionSkillsProps> = ({
         <Box>
           <Text sx={{ justifyContent: "flex-start" }}>
             <Text>{"Frontend "}</Text>
-            <Text variant={["s1", "h4", "h3", "h2"]} sx={{ fontWeight: "bold", fontStyle: "italic" }}>
+            <Text variant={["s1", "h5", "h4", "h3"]} sx={{ fontWeight: "bold", fontStyle: "italic" }}>
               {frontItems.map(item => `${item}\n`)}
             </Text>
             {backItems &&
               <Fragment>
                 <Text sx={{ mt: 6 }}>{"Backend "}</Text>
-                <Text variant={["s1", "h4", "h3", "h2"]} sx={{ fontWeight: "bold", fontStyle: "italic" }}>
+                <Text variant={["s1", "h5", "h4", "h3"]} sx={{ fontWeight: "bold", fontStyle: "italic" }}>
                   {backItems?.map(item => `${item}\n`)}
                 </Text>
               </Fragment>

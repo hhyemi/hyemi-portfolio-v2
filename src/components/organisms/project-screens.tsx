@@ -22,7 +22,7 @@ export const ProjectScreens: React.FunctionComponent<ProjectScreensProps> = ({
         {screenItems.map((item) => {
           return (
             <Fragment key={item.title}>
-              <Text variant={["s1", "h4"]} sx={{ mt: 7, mb: 3, fontWeight: "bold" }}>{item.title}</Text>
+              <Text variant={["s1", "h5"]} sx={{ mt: 7, mb: 3, fontWeight: "bold" }}>{item.title}</Text>
               <Image src={item.src} sx={{ width: ["400px", "600px", "1000px"]}}/>
             </Fragment>
           );
