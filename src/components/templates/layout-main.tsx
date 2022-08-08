@@ -1,7 +1,7 @@
 import React from "react";
 
 import {
-  Flex, FlexProps, Image, Responsive,
+  Flex, FlexProps, Responsive,
 } from "@components/atoms";
 import { Navbar, Sidebar } from "@components/organisms";
 

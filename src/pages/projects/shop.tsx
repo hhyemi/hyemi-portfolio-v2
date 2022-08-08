@@ -1,11 +1,8 @@
 import React from "react";
 
-import { Box, Flex } from "@components/atoms";
 import { SectionSkills } from "@components/molecules";
-import {
-  ImageHeader, ProjectIntroduce, ProjectReview, ProjectScreens, SIDEBAR_WIDTH,
-} from "@components/organisms";
-import { LayoutMain } from "@components/templates";
+import { ProjectIntroduce, ProjectReview, ProjectScreens } from "@components/organisms";
+import { LayoutProject } from "@components/templates";
 import type { NextPage } from "next";
 
 const screenItems = [
@@ -47,43 +44,27 @@ const functionItems = [
 
 const Shop: NextPage = () => {
   return (
-    <LayoutMain>
-      <Box>
+    <LayoutProject headerImage={"/images/shop-main.avif"}>
 
-        <ImageHeader src={"/images/shop-main.avif"}/>
+      <ProjectIntroduce
+        title={"Hyemi Shop"}
+        subtitle={"(쇼핑몰)"}
+        period={"2019.05 ~ 2019.06"}
+        developer={"1명 (개인프로젝트)"}
+        iconItems={[
+          { src: "/images/github.svg", url: "https://github.com/hhyemi/11Model2MVC" },
+        ]}
+        projectIntroduce={"사용자에게 쇼핑몰 제품을 구매, 장바구니, 후기, Q&A를 제공하고 \n  관리자페이지에서 재고관리 배송시스템 등 쇼핑몰의 전반적인 기능을 제공하는 시스템 🎁"}
+        functionItems={functionItems}
+      />
 
-        <Flex
-          sx={{
-            justifyContent: "center",
-            alignSelf: "center",
-            alignItems: "center",
-            flexDirection: "column",
-          }}>
-          <Box sx={{ ml: [0, null, SIDEBAR_WIDTH], p: [3, 6]}}>
+      <SectionSkills frontItems={frontItems} backItems={backItems}/>
 
-            <ProjectIntroduce
-              title={"Hyemi Shop"}
-              subtitle={"(쇼핑몰)"}
-              period={"2019.05 ~ 2019.06"}
-              developer={"1명 (개인프로젝트)"}
-              iconItems={[
-                { src: "/images/github.svg", url: "https://github.com/hhyemi/11Model2MVC" },
-              ]}
-              projectIntroduce={"사용자에게 쇼핑몰 제품을 구매, 장바구니, 후기, Q&A를 제공하고 \n  관리자페이지에서 재고관리 배송시스템 등 쇼핑몰의 전반적인 기능을 제공하는 시스템 🎁"}
-              functionItems={functionItems}
-            />
+      <ProjectScreens screenItems={screenItems}/>
 
-            <SectionSkills frontItems={frontItems} backItems={backItems}/>
+      <ProjectReview reviewItems={reviewItems} retrospectItems={retrospectItems}/>
 
-            <ProjectScreens screenItems={screenItems}/>
-
-            <ProjectReview reviewItems={reviewItems} retrospectItems={retrospectItems}/>
-
-          </Box>
-        </Flex>
-
-      </Box>
-    </LayoutMain>
+    </LayoutProject>
   );
 };
 

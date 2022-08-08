@@ -1,11 +1,8 @@
 import React from "react";
 
-import { Box, Flex } from "@components/atoms";
 import { SectionSkills } from "@components/molecules";
-import {
-  ImageHeader, ProjectIntroduce, ProjectReview, ProjectScreens, SIDEBAR_WIDTH,
-} from "@components/organisms";
-import { LayoutMain } from "@components/templates";
+import { ProjectIntroduce, ProjectReview, ProjectScreens } from "@components/organisms";
+import { LayoutProject } from "@components/templates";
 import type { NextPage } from "next";
 
 const screenItems = [
@@ -57,44 +54,28 @@ const functionItems = [
 
 const Jobup: NextPage = () => {
   return (
-    <LayoutMain>
-      <Box>
+    <LayoutProject headerImage={"/images/jobup-main.avif"}>
 
-        <ImageHeader src={"/images/jobup-main.avif"}/>
+      <ProjectIntroduce
+        title={"job-up"}
+        subtitle={"(직업을 잡아)"}
+        period={"2021.04.12 ~ 2021.05.21"}
+        developer={"1명 (개인프로젝트)"}
+        iconItems={[
+          { src: "/images/github.svg", url: "https://github.com/hhyemi/job-up" },
+          { src: "/images/youtube.svg", url: "https://www.youtube.com/watch?v=UpsirKm8t5c" },
+        ]}
+        projectIntroduce={"취업준비생을 위한 일정관리와 정보기록 및 \n 취업정보를 공유할 수 있는 커뮤니티 까지 포함한 취업관리 웹사이트입니다. 📝 ✏️"}
+        functionItems={functionItems}
+      />
 
-        <Flex
-          sx={{
-            justifyContent: "center",
-            alignSelf: "center",
-            alignItems: "center",
-            flexDirection: "column",
-          }}>
-          <Box sx={{ ml: [0, null, SIDEBAR_WIDTH], p: [3, 6]}}>
+      <SectionSkills frontItems={frontItems} backItems={backItems}/>
 
-            <ProjectIntroduce
-              title={"job-up"}
-              subtitle={"(직업을 잡아)"}
-              period={"2021.04.12 ~ 2021.05.21"}
-              developer={"1명 (개인프로젝트)"}
-              iconItems={[
-                { src: "/images/github.svg", url: "https://github.com/hhyemi/job-up" },
-                { src: "/images/youtube.svg", url: "https://www.youtube.com/watch?v=UpsirKm8t5c" },
-              ]}
-              projectIntroduce={"취업준비생을 위한 일정관리와 정보기록 및 \n 취업정보를 공유할 수 있는 커뮤니티 까지 포함한 취업관리 웹사이트입니다. 📝 ✏️"}
-              functionItems={functionItems}
-            />
+      <ProjectScreens screenItems={screenItems}/>
 
-            <SectionSkills frontItems={frontItems} backItems={backItems}/>
+      <ProjectReview reviewItems={reviewItems} retrospectItems={retrospectItems}/>
 
-            <ProjectScreens screenItems={screenItems}/>
-
-            <ProjectReview reviewItems={reviewItems} retrospectItems={retrospectItems}/>
-
-          </Box>
-        </Flex>
-
-      </Box>
-    </LayoutMain>
+    </LayoutProject>
   );
 };
 

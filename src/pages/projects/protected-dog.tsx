@@ -1,11 +1,8 @@
 import React from "react";
 
-import { Box, Flex } from "@components/atoms";
 import { SectionSkills } from "@components/molecules";
-import {
-  ImageHeader, ProjectIntroduce, ProjectReview, ProjectScreens, SIDEBAR_WIDTH,
-} from "@components/organisms";
-import { LayoutMain } from "@components/templates";
+import { ProjectIntroduce, ProjectReview, ProjectScreens } from "@components/organisms";
+import { LayoutProject } from "@components/templates";
 import type { NextPage } from "next";
 
 const screenItems = [
@@ -55,44 +52,28 @@ const functionItems = [
 
 const ProtectedDog: NextPage = () => {
   return (
-    <LayoutMain>
-      <Box>
+    <LayoutProject headerImage={"/images/protected-main.png"}>
 
-        <ImageHeader src={"/images/protected-main.png"}/>
+      <ProjectIntroduce
+        title={"보호할개"}
+        subtitle={"(유기견 보호 웹사이트)"}
+        period={"2019.06 ~ 2019.08"}
+        developer={"5명"}
+        iconItems={[
+          { src: "/images/github.svg", url: "https://github.com/hhyemi/protectedogWeb" },
+          { src: "/images/youtube.svg", url: "https://www.youtube.com/watch?v=Kxh2ttsuJ24" },
+        ]}
+        projectIntroduce={"반려견의 입양·분양, 스토리펀딩 , 관련정보 및 상품 판매를 회원들에게 제공함으로써 \n 유기견 없는 사회를 실현하고자 하는 시스템 🐶 ❤️"}
+        functionItems={functionItems}
+      />
 
-        <Flex
-          sx={{
-            justifyContent: "center",
-            alignSelf: "center",
-            alignItems: "center",
-            flexDirection: "column",
-          }}>
-          <Box sx={{ ml: [0, null, SIDEBAR_WIDTH], p: [3, 6]}}>
+      <SectionSkills frontItems={frontItems} backItems={backItems}/>
 
-            <ProjectIntroduce
-              title={"보호할개"}
-              subtitle={"(유기견 보호 웹사이트)"}
-              period={"2019.06 ~ 2019.08"}
-              developer={"5명"}
-              iconItems={[
-                { src: "/images/github.svg", url: "https://github.com/hhyemi/protectedogWeb" },
-                { src: "/images/youtube.svg", url: "https://www.youtube.com/watch?v=Kxh2ttsuJ24" },
-              ]}
-              projectIntroduce={"반려견의 입양·분양, 스토리펀딩 , 관련정보 및 상품 판매를 회원들에게 제공함으로써 \n 유기견 없는 사회를 실현하고자 하는 시스템 🐶 ❤️"}
-              functionItems={functionItems}
-            />
+      <ProjectScreens screenItems={screenItems}/>
 
-            <SectionSkills frontItems={frontItems} backItems={backItems}/>
+      <ProjectReview reviewItems={reviewItems} retrospectItems={retrospectItems}/>
 
-            <ProjectScreens screenItems={screenItems}/>
-
-            <ProjectReview reviewItems={reviewItems} retrospectItems={retrospectItems}/>
-
-          </Box>
-        </Flex>
-
-      </Box>
-    </LayoutMain>
+    </LayoutProject>
   );
 };
 
