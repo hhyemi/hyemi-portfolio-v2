@@ -58,9 +58,11 @@ export const Skills: React.FunctionComponent<SkillsProps> = () => {
           }}>
           {"SKILLS"}
         </Text>
-        <Flex ref={scrollContentRef} sx={{ justifyContent: "center", ...scrollContentStyle }}>
-          <List list={frontItems} sx={{ width: "50%" }}/>
-          <List list={backItems} sx={{ width: "50%" }}/>
+        <Flex ref={scrollContentRef} sx={{
+          flexDirection: ["column", null, "row"], justifyContent: "center", alignItems: "center", ...scrollContentStyle,
+        }}>
+          <List list={frontItems} sx={{ width: ["100%", null, "50%"]}}/>
+          <List list={backItems} sx={{ width: ["100%", null, "50%"]}}/>
         </Flex>
       </Box>
     </Flex>

@@ -43,18 +43,6 @@ export const List: React.FunctionComponent<ListProps> = ({
           );
         })}
         <ListDivider/>
-        <Subtitle>
-          {"•   React.js, Next.js"}
-        </Subtitle>
-        <ListDivider/>
-        <Subtitle>
-          {"•   MobX, Redux, Redux-saga, Apollo"}
-        </Subtitle>
-        <ListDivider/>
-        <Subtitle>
-          {"•   Css, Styled-component, Theme ui"}
-        </Subtitle>
-        <ListDivider/>
       </Box>
     </Flex>
   );
