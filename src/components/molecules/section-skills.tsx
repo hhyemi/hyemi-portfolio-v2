@@ -30,13 +30,13 @@ export const SectionSkills: React.FunctionComponent<SectionSkillsProps> = ({
         <Box>
           <Text sx={{ justifyContent: "flex-start" }}>
             <Text>{"Frontend "}</Text>
-            <Text variant={["s1", "h5", "h4", "h3"]} sx={{ fontWeight: "bold", fontStyle: "italic" }}>
+            <Text variant={["s1", "h5", "h4", "h3"]} sx={{ fontWeight: "bold", fontStyle: "italic", lineHeight: 1.8 }}>
               {frontItems.map(item => `${item}\n`)}
             </Text>
             {backItems &&
               <Fragment>
                 <Text sx={{ mt: 6 }}>{"Backend "}</Text>
-                <Text variant={["s1", "h5", "h4", "h3"]} sx={{ fontWeight: "bold", fontStyle: "italic" }}>
+                <Text variant={["s1", "h5", "h4", "h3"]} sx={{ fontWeight: "bold", fontStyle: "italic", lineHeight: 1.8 }}>
                   {backItems?.map(item => `${item}\n`)}
                 </Text>
               </Fragment>
