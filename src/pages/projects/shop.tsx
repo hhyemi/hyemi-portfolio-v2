@@ -2,7 +2,7 @@ import React from "react";
 
 import { SectionSkills } from "@components/molecules";
 import { ProjectIntroduce, ProjectReview, ProjectScreens } from "@components/organisms";
-import { LayoutProject } from "@components/templates";
+import { LayoutDetail } from "@components/templates";
 import type { NextPage } from "next";
 
 const screenItems = [
@@ -44,7 +44,7 @@ const functionItems = [
 
 const Shop: NextPage = () => {
   return (
-    <LayoutProject headerImage={"/images/shop-main.avif"}>
+    <LayoutDetail headerImage={"/images/shop-main.avif"}>
 
       <ProjectIntroduce
         title={"Hyemi Shop"}
@@ -64,7 +64,7 @@ const Shop: NextPage = () => {
 
       <ProjectReview reviewItems={reviewItems} retrospectItems={retrospectItems}/>
 
-    </LayoutProject>
+    </LayoutDetail>
   );
 };
 

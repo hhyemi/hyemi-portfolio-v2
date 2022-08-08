@@ -2,7 +2,7 @@ import React from "react";
 
 import { SectionSkills } from "@components/molecules";
 import { ProjectIntroduce, ProjectReview, ProjectScreens } from "@components/organisms";
-import { LayoutProject } from "@components/templates";
+import { LayoutDetail } from "@components/templates";
 import type { NextPage } from "next";
 
 const screenItems = [
@@ -52,7 +52,7 @@ const functionItems = [
 
 const ProtectedDog: NextPage = () => {
   return (
-    <LayoutProject headerImage={"/images/protected-main.png"}>
+    <LayoutDetail headerImage={"/images/protected-main.png"}>
 
       <ProjectIntroduce
         title={"보호할개"}
@@ -73,7 +73,7 @@ const ProtectedDog: NextPage = () => {
 
       <ProjectReview reviewItems={reviewItems} retrospectItems={retrospectItems}/>
 
-    </LayoutProject>
+    </LayoutDetail>
   );
 };
 

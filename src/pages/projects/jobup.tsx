@@ -2,7 +2,7 @@ import React from "react";
 
 import { SectionSkills } from "@components/molecules";
 import { ProjectIntroduce, ProjectReview, ProjectScreens } from "@components/organisms";
-import { LayoutProject } from "@components/templates";
+import { LayoutDetail } from "@components/templates";
 import type { NextPage } from "next";
 
 const screenItems = [
@@ -54,7 +54,7 @@ const functionItems = [
 
 const Jobup: NextPage = () => {
   return (
-    <LayoutProject headerImage={"/images/jobup-main.avif"}>
+    <LayoutDetail headerImage={"/images/jobup-main.avif"}>
 
       <ProjectIntroduce
         title={"job-up"}
@@ -75,7 +75,7 @@ const Jobup: NextPage = () => {
 
       <ProjectReview reviewItems={reviewItems} retrospectItems={retrospectItems}/>
 
-    </LayoutProject>
+    </LayoutDetail>
   );
 };
 

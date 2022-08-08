@@ -8,13 +8,13 @@ import {
 } from "@components/organisms";
 import { LayoutMain } from "@components/templates";
 
-export type LayoutProjectProps = FlexProps & {
+export type LayoutDetailProps = FlexProps & {
   headerImage: string;
   navbarStyle?: FlexProps;
   loading?: boolean;
 };
 
-export const LayoutProject: React.FunctionComponent<LayoutProjectProps> = ({
+export const LayoutDetail: React.FunctionComponent<LayoutDetailProps> = ({
   headerImage,
   children,
   ...rest
