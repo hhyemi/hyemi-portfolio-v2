@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import {
   Box, Flex, FlexProps, Image, Text,
@@ -50,11 +50,9 @@ const imageItems = [
 
 export const Footer: React.FunctionComponent<FooterProps> = () => {
   return (
-    <>
+    <Box sx={{ height: "100vh" }}>
       <Flex
-        id={"about"}
         sx={{
-          height: "100vh",
           justifyContent: "center",
           alignSelf: "center",
           alignItems: "center",
@@ -69,6 +67,7 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
             variant={["h4", null, "h3"]}
             sx={{
               pb: 4,
+              pt: 20,
               fontFamily: "title",
               letterSpacing: "0.1em",
             }}>
@@ -89,43 +88,40 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
               />
             </Flex>
           </Box>
-
-          <Box sx={{
-            height: "300px",
-            margin: "auto",
-            position: "relative",
-            width: "100vw",
-            display: "grid",
-            placeItems: "center",
-            overflow: "hidden",
-            left: "-400px",
-          }}>
-            <Flex
-              sx={{
-                width: "calc(400px * 18)",
-                animation: `${boxFade} 30s linear infinite`,
-              }}>
-              {imageItems.map((item) => {
-                return (
-                  <ImageFlex key={item}>
-                    <Image src={item}/>
-                  </ImageFlex>
-                );
-              })}
-            </Flex>
-          </Box>
-
-          <Box sx={{
-            padding: "2rem 0",
-            bottom: 0,
-            textAlign: "center",
-          }}>
-            <Text>
-              {"© COPYRIGHT 2022. DEVELOPER PORTFOLIO - BY HYEMI"}
-            </Text>
-          </Box>
         </Box>
       </Flex>
-    </>
+      <Box sx={{
+        height: "300px",
+        margin: "auto",
+        position: "relative",
+        width: "100vw",
+        display: "grid",
+        placeItems: "center",
+        overflow: "hidden",
+      }}>
+        <Flex
+          sx={{
+            width: "calc(400px * 18)",
+            animation: `${boxFade} 50s linear infinite`,
+          }}>
+          {imageItems.map((item) => {
+            return (
+              <ImageFlex key={item}>
+                <Image src={item}/>
+              </ImageFlex>
+            );
+          })}
+        </Flex>
+      </Box>
+      <Box sx={{
+        padding: "2rem 0",
+        bottom: 0,
+        textAlign: "center",
+      }}>
+        <Text>
+          {"© COPYRIGHT 2022. DEVELOPER PORTFOLIO - BY HYEMI"}
+        </Text>
+      </Box>
+    </Box>
   );
 };
