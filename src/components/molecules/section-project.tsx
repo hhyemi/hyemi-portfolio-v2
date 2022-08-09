@@ -44,50 +44,62 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
       }}
     >
       <Box sx={{ width: SECTION_WIDTH }}>
-        <Box>
-          <Text
-            ref={scrollTitleRef}
-            variant={["h3", "h2", "h1"]}
-            sx={{
-              pb: 10,
-              fontFamily: "title",
-              letterSpacing: "0.1em",
-              ...scrollTitleStyle,
-            }}>
-            {menuTitle}
-          </Text>
+
+        <Text
+          ref={scrollTitleRef}
+          variant={["h3", "h2", "h1"]}
+          sx={{
+            fontFamily: "title",
+            letterSpacing: "0.1em",
+            color: "pastel-pink",
+            fontSize: "100px",
+            ...scrollTitleStyle,
+          }}>
+          {`0${index + 1}`}
+        </Text>
+        <Text
+          className={"project-text"}
+          variant={["h3", "h2", "h1"]}
+          sx={{
+            fontFamily: "title",
+            letterSpacing: "0.1em",
+            position: "relative",
+            top: "-78px",
+          }}>
+          {menuTitle}
+        </Text>
+
+        <Flex
+          ref={scrollContentRef}
+          sx={{ ...scrollContentStyle }}>
           <Flex
-            ref={scrollContentRef}
-            sx={{ ...scrollContentStyle }}>
-            <Flex
-              ref={element}
-              onClick={handleClick}
-              sx={{
-                justifyContent: "center",
-                alignSelf: "center",
-                alignItems: "center",
-                cursor: "pointer",
-                flexDirection: ["column", null, "row"],
-              }}>
-              <Image src={image} sx={{ width: ["360px", null, "460px"], mb: [4, null, 0]}}/>
-              <Flex sx={{
-                ml: [0, null, 5], alignSelf: "center", flexDirection: "column", alignItems: ["center", null, "flex-start"],
-              }}>
-                <Text variant={["h5", "h4", "h3", "h2"]} sx={{ fontWeight: "bold", mb: 1 }}>{title}</Text>
-                <Text variant={["s2", "s1", "s1"]}>
-                  {subtitle}
-                </Text>
-                <Button
-                  variant={"white"}
-                  appearance={"outlined"}
-                  sx={{ mt: 3 }}
-                >
-                  {"DETAILS"}
-                </Button>
-              </Flex>
+            ref={element}
+            onClick={handleClick}
+            sx={{
+              justifyContent: "center",
+              alignSelf: "center",
+              alignItems: "center",
+              cursor: "pointer",
+              flexDirection: ["column", null, "row"],
+            }}>
+            <Image src={image} sx={{ width: ["360px", null, "460px"], mb: [4, null, 0]}}/>
+            <Flex sx={{
+              ml: [0, null, 5], alignSelf: "center", flexDirection: "column", alignItems: ["center", null, "flex-start"],
+            }}>
+              <Text variant={["h5", "h4", "h3", "h2"]} sx={{ fontWeight: "bold", mb: 1 }}>{title}</Text>
+              <Text variant={["s2", "s1", "s1"]}>
+                {subtitle}
+              </Text>
+              <Button
+                variant={"white"}
+                appearance={"outlined"}
+                sx={{ mt: 3 }}
+              >
+                {"DETAILS"}
+              </Button>
             </Flex>
           </Flex>
-        </Box>
+        </Flex>
 
         <Cursor elements={[element]} hasBackgroundImage={true}/>
       </Box>

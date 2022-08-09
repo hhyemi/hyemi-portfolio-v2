@@ -6,7 +6,7 @@ export type CareerProps = {};
 
 const careerItems = [
   {
-    menuTitle: "CAREER-1",
+    menuTitle: "CAREER",
     image: "images/qmit.png",
     title: "큐엠아이티 (QMIT) : 팀원(프론트엔드개발자)",
     subtitle: "선수와 지도자를 위한 B2C 플랫폼 서비스로, 데이터를 통해 스포츠 선수의 부상을 예방하고, 컨디셔닝을 향상시키는 데이터 플랫폼",
@@ -18,7 +18,7 @@ const careerItems = [
     page: "/career/qmit",
   },
   {
-    menuTitle: "CAREER-2",
+    menuTitle: "CAREER",
     image: "images/geotwo.png",
     title: "지오투정보기술 (GeoTwo) : 사원 (풀스택)",
     subtitle: "공간정보시스템(Geographic Information System, GIS) 전문 기업",

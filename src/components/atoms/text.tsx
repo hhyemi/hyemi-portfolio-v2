@@ -55,7 +55,7 @@ export const Text: React.FunctionComponent<TextProps> = forwardRef((
     ellipsis,
     multiLineEllipsis = 0,
     variant = "p1",
-    appearance = null,
+    appearance = "black",
     ...rest
   },
   ref

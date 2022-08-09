@@ -85,17 +85,30 @@ export const SectionCareer: React.FunctionComponent<SectionCareerProps> = ({
       }}
     >
       <Box sx={{ width: SECTION_WIDTH }}>
+
         <Text
           ref={scrollTitleRef}
           variant={["h3", "h2", "h1"]}
           sx={{
             fontFamily: "title",
             letterSpacing: "0.1em",
-            pb: 10,
+            color: "pastel-blue",
+            fontSize: "100px",
             ...scrollTitleStyle,
+          }}>
+          {`0${index + 1}`}
+        </Text>
+        <Text
+          variant={["h3", "h2", "h1"]}
+          sx={{
+            fontFamily: "title",
+            letterSpacing: "0.1em",
+            position: "relative",
+            top: "-78px",
           }}>
           {menuTitle}
         </Text>
+
         <Box ref={scrollContentRef} sx={{ ...scrollContentStyle }}>
           <CareerCard onClick={handleClick} sx={{ cursor: "pointer" }}>
             <Box ref={element}>

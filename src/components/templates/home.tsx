@@ -27,7 +27,7 @@ export const Home: React.FunctionComponent<HomeProps> = () => {
       ".block",
       2,
       {
-        y: 700,
+        y: 900,
         ease: "Expo.easeInOut",
         delay: 1,
       },
@@ -63,7 +63,6 @@ export const Home: React.FunctionComponent<HomeProps> = () => {
         height: "100vh",
         width: "100vw",
         p: [`${CONTENT_PADDING}px`],
-        background: "#000000",
         overflow: "hidden",
       }}>
       <Box
@@ -94,18 +93,16 @@ export const Home: React.FunctionComponent<HomeProps> = () => {
         </Box>
         <Text
           className={"hello-text"}
-          appearance={"alternative"}
           sx={{
             fontSize: ["24px", "42px", "56px", "72px"], fontFamily: "title", letterSpacing: "0.1em", mt: -8,
           }}>
           <ReactTyped
-            strings={["HELLO 👾!", "I'M HYEMI"]}
+            strings={["HELLO :)", "I'M HYEMI"]}
             typeSpeed={50}
             backSpeed={60}
             loop
           />
           <Text
-            appearance={"alternative"}
             variant={["l1", "p1", "s1"]}
             sx={{ fontFamily: "title", letterSpacing: "0.1em" }}>
             {"FRONT-END DEVELOPER"}
