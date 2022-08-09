@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import {
-  Box, BoxProps, Icon, StyledLink,
+  Box, BoxProps, StyledLink,
 } from "@components/atoms";
+import { IconButton } from "@components/molecules";
 
 export type ScrollButtonProps = BoxProps & {};
 
@@ -13,7 +14,7 @@ export const ScrollButton: React.FunctionComponent<ScrollButtonProps> = ({
     <Box>
       <StyledLink
         href={"/#home"}>
-        <Icon
+        <IconButton
           src={"/images/scroll-up.svg"}
           size={60}
           sx={{

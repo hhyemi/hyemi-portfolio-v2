@@ -3,7 +3,8 @@ import React from "react";
 import { Box } from "@components/atoms";
 import { ScrollButton } from "@components/molecules";
 import {
-  About, Career, Home, LayoutMain, Projects, Skills,
+  About, Career, Footer,
+  Home, LayoutMain, Projects, Skills,
 } from "@components/templates";
 import styled from "@emotion/styled";
 import type { NextPage } from "next";
@@ -32,6 +33,7 @@ const Main: NextPage = () => {
           <Skills/>
           <Career/>
           <Projects/>
+          <Footer/>
         </Box>
       </StyledBox>
       <ScrollButton/>

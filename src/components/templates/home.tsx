@@ -84,9 +84,9 @@ export const Home: React.FunctionComponent<HomeProps> = () => {
             height: "300px",
           }}>
           <ImageBox url={"/images/main-1.jpg"}/>
-          <ImageBox url={"/images/main-2.jpg"}/>
           <ImageBox url={"/images/main-3.jpg"}/>
           <ImageBox url={"/images/main-4.jpg"}/>
+          <ImageBox url={"/images/main-2.jpg"}/>
           <ImageBox url={"/images/main-5.jpg"}/>
           <ImageBox url={"/images/main-6.jpg"}/>
           <ImageBox url={"/images/main-7.jpg"}/>
