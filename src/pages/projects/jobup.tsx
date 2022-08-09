@@ -3,14 +3,15 @@ import React from "react";
 import { SectionSkills } from "@components/molecules";
 import { ProjectIntroduce, ProjectReview, ProjectScreens } from "@components/organisms";
 import { LayoutDetail } from "@components/templates";
+import { prefix } from "@config/config";
 import type { NextPage } from "next";
 
 const screenItems = [
-  { title: "✨ Main", src: "/images/jobup-home.png" },
-  { title: "✨ Calendar", src: "/images/jobup-calendar.png" },
-  { title: "✨ TodoList", src: "/images/jobup-todo.png" },
-  { title: "✨ Memo", src: "/images/jobup-memo.png" },
-  { title: "✨ StopWatch", src: "/images/jobup-stopwatch.png" },
+  { title: "✨ Main", src: `${prefix}/images/jobup-home.png` },
+  { title: "✨ Calendar", src: `${prefix}/images/jobup-calendar.png` },
+  { title: "✨ TodoList", src: `${prefix}/images/jobup-todo.png` },
+  { title: "✨ Memo", src: `${prefix}/images/jobup-memo.png` },
+  { title: "✨ StopWatch", src: `${prefix}/images/jobup-stopwatch.png` },
 ];
 
 const frontItems = [
@@ -54,7 +55,7 @@ const functionItems = [
 
 const Jobup: NextPage = () => {
   return (
-    <LayoutDetail headerImage={"/images/jobup-main.avif"}>
+    <LayoutDetail headerImage={`${prefix}/images/jobup-main.avif`}>
 
       <ProjectIntroduce
         title={"job-up"}
@@ -62,8 +63,8 @@ const Jobup: NextPage = () => {
         period={"2021.04.12 ~ 2021.05.21"}
         developer={"1명 (개인프로젝트)"}
         iconItems={[
-          { src: "/images/github.svg", url: "https://github.com/hhyemi/job-up" },
-          { src: "/images/youtube.svg", url: "https://www.youtube.com/watch?v=UpsirKm8t5c" },
+          { src: `${prefix}/images/github.svg`, url: "https://github.com/hhyemi/job-up" },
+          { src: `${prefix}/images/youtube.svg`, url: "https://www.youtube.com/watch?v=UpsirKm8t5c" },
         ]}
         projectIntroduce={"취업준비생을 위한 일정관리와 정보기록 및 \n 취업정보를 공유할 수 있는 커뮤니티 까지 포함한 취업관리 웹사이트입니다. 📝 ✏️"}
         functionItems={functionItems}

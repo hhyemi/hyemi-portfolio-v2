@@ -3,13 +3,14 @@ import React from "react";
 import { SectionSkills } from "@components/molecules";
 import { ProjectIntroduce, ProjectReview, ProjectScreens } from "@components/organisms";
 import { LayoutDetail } from "@components/templates";
+import { prefix } from "@config/config";
 import type { NextPage } from "next";
 
 const screenItems = [
-  { title: "✨ 메인 & 채팅", src: "/images/protected-chat.png" },
-  { title: "✨ 투표게시판", src: "/images/protected-vote.png" },
-  { title: "✨ 후원게시판", src: "/images/protected-give.png" },
-  { title: "✨ 동물병원게시판", src: "/images/protected-hospital.png" },
+  { title: "✨ 메인 & 채팅", src: `${prefix}/images/protected-chat.png` },
+  { title: "✨ 투표게시판", src: `${prefix}/images/protected-vote.png` },
+  { title: "✨ 후원게시판", src: `${prefix}/images/protected-give.png` },
+  { title: "✨ 동물병원게시판", src: `${prefix}/images/protected-hospital.png` },
 ];
 
 const frontItems = [
@@ -52,7 +53,7 @@ const functionItems = [
 
 const ProtectedDog: NextPage = () => {
   return (
-    <LayoutDetail headerImage={"/images/protected-main.png"}>
+    <LayoutDetail headerImage={`${prefix}/images/protected-main.png`}>
 
       <ProjectIntroduce
         title={"보호할개"}
@@ -60,8 +61,8 @@ const ProtectedDog: NextPage = () => {
         period={"2019.06 ~ 2019.08"}
         developer={"5명"}
         iconItems={[
-          { src: "/images/github.svg", url: "https://github.com/hhyemi/protectedogWeb" },
-          { src: "/images/youtube.svg", url: "https://www.youtube.com/watch?v=Kxh2ttsuJ24" },
+          { src: `${prefix}/images/github.svg`, url: "https://github.com/hhyemi/protectedogWeb" },
+          { src: `${prefix}/images/youtube.svg`, url: "https://www.youtube.com/watch?v=Kxh2ttsuJ24" },
         ]}
         projectIntroduce={"반려견의 입양·분양, 스토리펀딩 , 관련정보 및 상품 판매를 회원들에게 제공함으로써 \n 유기견 없는 사회를 실현하고자 하는 시스템 🐶 ❤️"}
         functionItems={functionItems}

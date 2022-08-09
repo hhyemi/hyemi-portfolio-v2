@@ -1,4 +1,5 @@
 {
+  "homepage": "http://hhyemi.github.io/hyemi-portfolio-v2",
   "name": "hyemi-portfolio-v2",
   "version": "0.1.0",
   "private": true,
@@ -6,6 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
     "lint": "next lint",
     "typescript-check": "tsc --project ./tsconfig.json"
   },

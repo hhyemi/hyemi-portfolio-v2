@@ -4,6 +4,7 @@ import {
   Box, BoxProps, StyledLink,
 } from "@components/atoms";
 import { IconButton } from "@components/molecules";
+import { prefix } from "@config/config";
 
 export type ScrollButtonProps = BoxProps & {};
 
@@ -15,7 +16,7 @@ export const ScrollButton: React.FunctionComponent<ScrollButtonProps> = ({
       <StyledLink
         href={"/#home"}>
         <IconButton
-          src={"/images/scroll-up.svg"}
+          src={`${prefix}/images/scroll-up.svg`}
           size={60}
           sx={{
             position: "fixed",

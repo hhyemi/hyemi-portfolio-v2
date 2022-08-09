@@ -3,6 +3,7 @@ import React from "react";
 import {
   Box, Flex, Image, Text, TextProps,
 } from "@components/atoms";
+import { prefix } from "@config/config";
 import { useScrollFadeIn } from "@hooks";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 
@@ -59,7 +60,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
         <Box ref={scrollContentRef} sx={{ ...scrollContentStyle }}>
           <Flex sx={{ flexDirection: ["column", null, "row"]}}>
             <Image
-              src={"/images/hyemi.jpeg"}
+              src={`${prefix}/images/hyemi.jpeg`}
               sx={{
                 alignSelf: ["center", null, "flex-start"],
                 width: ["40%", "30%"],

@@ -3,11 +3,12 @@ import React from "react";
 import { SectionSkills } from "@components/molecules";
 import { ProjectIntroduce, ProjectReview, ProjectScreens } from "@components/organisms";
 import { LayoutDetail } from "@components/templates";
+import { prefix } from "@config/config";
 import type { NextPage } from "next";
 
 const screenItems = [
-  { title: "✨ 상품목록", src: "/images/shop-list.png" },
-  { title: "✨ 상품상세보기", src: "/images/shop-detail.png" },
+  { title: "✨ 상품목록", src: `${prefix}/images/shop-list.png` },
+  { title: "✨ 상품상세보기", src: `${prefix}/images/shop-detail.png` },
 ];
 
 const frontItems = [
@@ -44,7 +45,7 @@ const functionItems = [
 
 const Shop: NextPage = () => {
   return (
-    <LayoutDetail headerImage={"/images/shop-main.avif"}>
+    <LayoutDetail headerImage={`${prefix}/images/shop-main.avif`}>
 
       <ProjectIntroduce
         title={"Hyemi Shop"}
@@ -52,7 +53,7 @@ const Shop: NextPage = () => {
         period={"2019.05 ~ 2019.06"}
         developer={"1명 (개인프로젝트)"}
         iconItems={[
-          { src: "/images/github.svg", url: "https://github.com/hhyemi/11Model2MVC" },
+          { src: `${prefix}/images/github.svg`, url: "https://github.com/hhyemi/11Model2MVC" },
         ]}
         projectIntroduce={"사용자에게 쇼핑몰 제품을 구매, 장바구니, 후기, Q&A를 제공하고 \n  관리자페이지에서 재고관리 배송시스템 등 쇼핑몰의 전반적인 기능을 제공하는 시스템 🎁"}
         functionItems={functionItems}

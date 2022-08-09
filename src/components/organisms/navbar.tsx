@@ -4,6 +4,7 @@ import {
   Box, Flex, FlexProps, Icon, IconProps, Responsive, StyledLink, Text,
   TextProps,
 } from "@components/atoms";
+import { prefix } from "@config/config";
 import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@themes/main";
 
 export type NavbarProps = FlexProps & {};
@@ -62,7 +63,7 @@ const TopNavHamburger = (props: FlexProps & {onClick: IconProps["onClick"]; open
       }}
       {...props}>
       <Icon
-        src={props.open ? "/images/close.svg" : "/images/menu-hamburger.svg"}
+        src={props.open ? `${prefix}/images/close.svg` : `${prefix}/images/menu-hamburger.svg`}
         onClick={props.onClick}
         size={props.open ? 22 : 32}
       />

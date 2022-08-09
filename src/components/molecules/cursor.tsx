@@ -3,6 +3,7 @@ import React, {
 } from "react";
 
 import { Box, FlexProps } from "@components/atoms";
+import { prefix } from "@config/config";
 
 export type CursorProps = FlexProps & {
   elements: RefObject<HTMLDivElement>[];
@@ -68,7 +69,7 @@ export const Cursor: React.FunctionComponent<CursorProps> = ({
         mixBlendMode: hasBackgroundImage ? "inherit" : "difference",
         transform: linkHovered ? `translate(-50%, -50%) scale(${scale})` : "translate(-50%, -50%)",
         backgroundColor: linkHovered ? "#ffffff" : "black",
-        backgroundImage: hasBackgroundImage ? "url('images/plus.png')" : undefined,
+        backgroundImage: hasBackgroundImage ? `url('${prefix}images/plus.png')` : undefined,
         backgroundSize: "100%",
       }}
     />

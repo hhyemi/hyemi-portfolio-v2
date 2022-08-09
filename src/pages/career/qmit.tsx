@@ -5,6 +5,7 @@ import {
 } from "@components/atoms";
 import { CardList, SectionSkills } from "@components/molecules";
 import { LayoutDetail } from "@components/templates";
+import { prefix } from "@config/config";
 import { CONTENT_MARGIN_BOTTOM } from "@themes/main";
 import type { NextPage } from "next";
 
@@ -70,11 +71,11 @@ const cardItems = [
 
 const Qmit: NextPage = () => {
   return (
-    <LayoutDetail headerImage={"/images/qmit-main.avif"}>
+    <LayoutDetail headerImage={`${prefix}/images/qmit-main.avif`}>
 
       <Box sx={{ my: 6, mb: 15 }}>
         <Flex sx={{ mb: 1 }}>
-          <Image src={"/images/qmit.png"} sx={{ width: ["100px", "140px", "200px"]}}/>
+          <Image src={`${prefix}/images/qmit.png`} sx={{ width: ["100px", "140px", "200px"]}}/>
           <Text sx={{
             fontSize: ["28px", "32px", "40px", "48px"],
             fontWeight: "bold",
@@ -139,14 +140,14 @@ const Qmit: NextPage = () => {
 
               <ContentText sx={{ mt: 3 }}>{"▪️ Solution : "}</ContentText>
               <ContentText>{"• 6단계 프로세스를 이용하여 시스템을 구축했다."}</ContentText>
-              <Image src={"/images/chart.png"} sx={{ width: ["400px", "500px"], my: 1 }}/>
+              <Image src={`${prefix}/images/chart.png`} sx={{ width: ["400px", "500px"], my: 1 }}/>
 
               <ContentText sx={{ mt: 3 }}>{"▪️ Result : "}</ContentText>
               <ContentText>{"• 90개 이상의 chart 구현"}</ContentText>
               <ContentText>{"• 시간과 노력 및 코드를 엄청나게 절약, 차트를 추가하거나 수정하는것이 빠르고 쉬워짐"}</ContentText>
               <ContentText>{"• bar, line, stack, polar 등 다양한 종류와 최근7일간, 최근28일간 데이터 표현"}</ContentText>
-              <ContentImage src={"/images/qmit-chart1.png"}/><br/>
-              <ContentImage src={"/images/qmit-chart2.png"}/>
+              <ContentImage src={`${prefix}/images/qmit-chart1.png`}/><br/>
+              <ContentImage src={`${prefix}/images/qmit-chart2.png`}/>
             </Box>
 
             <TaskTitle>{"▎design system 구축"}</TaskTitle>
@@ -159,13 +160,13 @@ const Qmit: NextPage = () => {
             <Box sx={{ pl: 2 }}>
               <ContentText>{"• 팀 목록, 팀추가, 팀수정, 팀삭제"}</ContentText>
               <ContentText>{"• 팀 이동하여 팀 정보 표현"}</ContentText>
-              <ContentImage src={"/images/qmit-team.png"}/>
+              <ContentImage src={`${prefix}/images/qmit-team.png`}/>
             </Box>
 
             <TaskTitle>{"▎반응형 작업"}</TaskTitle>
             <Box sx={{ pl: 2 }}>
               <ContentText>{"• 웹, 태블릿, 핸드폰 사이즈(xl, lg, md, sm) 반응형 작업"}</ContentText>
-              <ContentImage src={"/images/qmit-dashboard.png"}/>
+              <ContentImage src={`${prefix}/images/qmit-dashboard.png`}/>
             </Box>
 
             <TaskTitle>{"▎기존 개발 유지보수"}</TaskTitle>

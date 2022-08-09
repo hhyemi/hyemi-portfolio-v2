@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 
+import { prefix } from "@config/config";
+import { PortfolioProvider } from "@providers";
 import ResponsiveProvider from "@providers/responsive";
 import ThemeProvider from "@providers/theme";
 import type { AppProps } from "next/app";
@@ -11,11 +13,13 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>{"HYEMI"}</title>
       </Head>
-      <ThemeProvider>
-        <ResponsiveProvider>
-          <Component {...pageProps}/>
-        </ResponsiveProvider>
-      </ThemeProvider>
+      <PortfolioProvider value={{ prefix }}>
+        <ThemeProvider>
+          <ResponsiveProvider>
+            <Component {...pageProps}/>
+          </ResponsiveProvider>
+        </ThemeProvider>
+      </PortfolioProvider>
     </Fragment>
   );
 };

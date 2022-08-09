@@ -1,5 +1,6 @@
 import React from "react";
 
+import { prefix } from "@config/config";
 import { Global } from "@emotion/react";
 import globalStyle from "@styles/global";
 import resetStyle from "@styles/reset";
@@ -14,7 +15,7 @@ class MyDocument extends Document {
         <Global styles={() => `${resetStyle}${globalStyle}`}/>
         <Head>
           {/* metatada */}
-          <link rel={"shortcut icon"} href={"/images/favicon.png"}/>
+          <link rel={"shortcut icon"} href={`${prefix}/images/favicon.png`}/>
           <meta name={"viewport"} content={"width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"}/>
           {/* fonts */}
           <link rel={"preconnect"} href={"https://fonts.gstatic.com"}/>

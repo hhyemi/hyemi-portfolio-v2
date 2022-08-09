@@ -4,6 +4,7 @@ import ReactTyped from "react-typed";
 import {
   Box, BoxProps, Flex, Text,
 } from "@components/atoms";
+import { prefix } from "@config/config";
 import {
   CONTENT_PADDING, MD_AND_UP_CONTENT_TOP, SM_CONTENT_TOP,
 } from "@themes/main";
@@ -83,13 +84,13 @@ export const Home: React.FunctionComponent<HomeProps> = () => {
             width: "400px",
             height: "300px",
           }}>
-          <ImageBox url={"/images/main-1.jpg"}/>
-          <ImageBox url={"/images/main-3.jpg"}/>
-          <ImageBox url={"/images/main-4.jpg"}/>
-          <ImageBox url={"/images/main-2.jpg"}/>
-          <ImageBox url={"/images/main-5.jpg"}/>
-          <ImageBox url={"/images/main-6.jpg"}/>
-          <ImageBox url={"/images/main-7.jpg"}/>
+          <ImageBox url={`${prefix}/images/main-1.jpg`}/>
+          <ImageBox url={`${prefix}/images/main-3.jpg`}/>
+          <ImageBox url={`${prefix}/images/main-4.jpg`}/>
+          <ImageBox url={`${prefix}/images/main-2.jpg`}/>
+          <ImageBox url={`${prefix}/images/main-5.jpg`}/>
+          <ImageBox url={`${prefix}/images/main-6.jpg`}/>
+          <ImageBox url={`${prefix}/images/main-7.jpg`}/>
         </Box>
         <Text
           className={"hello-text"}

@@ -4,6 +4,7 @@ import {
   Box, Flex, FlexProps, Image, Text,
 } from "@components/atoms";
 import { IconButton } from "@components/molecules";
+import { prefix } from "@config/config";
 import { keyframes } from "@emotion/react";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 
@@ -28,24 +29,24 @@ const ImageFlex = (props: FlexProps) => <Flex
 />;
 
 const imageItems = [
-  "/images/footer-1.jpg",
-  "/images/footer-2.jpg",
-  "/images/footer-3.jpg",
-  "/images/footer-4.jpg",
-  "/images/footer-5.jpg",
-  "/images/footer-6.jpg",
-  "/images/footer-7.jpg",
-  "/images/footer-8.jpg",
-  "/images/footer-9.jpg",
-  "/images/footer-10.jpg",
-  "/images/footer-11.jpg",
-  "/images/footer-12.jpg",
-  "/images/footer-13.jpg",
-  "/images/footer-14.jpg",
-  "/images/footer-15.jpg",
-  "/images/footer-16.jpg",
-  "/images/footer-17.jpg",
-  "/images/footer-18.jpg",
+  `${prefix}/images/footer-1.jpg`,
+  `${prefix}/images/footer-2.jpg`,
+  `${prefix}/images/footer-3.jpg`,
+  `${prefix}/images/footer-4.jpg`,
+  `${prefix}/images/footer-5.jpg`,
+  `${prefix}/images/footer-6.jpg`,
+  `${prefix}/images/footer-7.jpg`,
+  `${prefix}/images/footer-8.jpg`,
+  `${prefix}/images/footer-9.jpg`,
+  `${prefix}/images/footer-10.jpg`,
+  `${prefix}/images/footer-11.jpg`,
+  `${prefix}/images/footer-12.jpg`,
+  `${prefix}/images/footer-13.jpg`,
+  `${prefix}/images/footer-14.jpg`,
+  `${prefix}/images/footer-15.jpg`,
+  `${prefix}/images/footer-16.jpg`,
+  `${prefix}/images/footer-17.jpg`,
+  `${prefix}/images/footer-18.jpg`,
 ];
 
 export const Footer: React.FunctionComponent<FooterProps> = () => {
@@ -77,12 +78,12 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
           <Box>
             <Flex sx={{ mb: 24 }}>
               <IconButton
-                src={"/images/email.svg"}
+                src={`${prefix}/images/email.svg`}
                 size={[30, 40]}
                 onClick={() => window.open("mailto:dlgpal9508@gmail.com")}
               />
               <IconButton
-                src={"/images/github.svg"}
+                src={`${prefix}/images/github.svg`}
                 size={[30, 40]}
                 onClick={() => window.open("https://github.com/hhyemi")}
               />

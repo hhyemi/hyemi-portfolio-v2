@@ -5,6 +5,7 @@ import {
 } from "@components/atoms";
 import { CardList, SectionSkills } from "@components/molecules";
 import { LayoutDetail } from "@components/templates";
+import { prefix } from "@config/config";
 import { CONTENT_MARGIN_BOTTOM } from "@themes/main";
 import type { NextPage } from "next";
 
@@ -65,11 +66,11 @@ const cardItems = [
 
 const Geotwo: NextPage = () => {
   return (
-    <LayoutDetail headerImage={"/images/geotwo-main.avif"}>
+    <LayoutDetail headerImage={`${prefix}/images/geotwo-main.avif`}>
 
       <Box sx={{ my: 6, mb: 15 }}>
         <Flex sx={{ mb: 1 }}>
-          <Image src={"/images/geotwo.png"} sx={{ width: ["90px", "100px", "140px"]}}/>
+          <Image src={`${prefix}/images/geotwo.png`} sx={{ width: ["90px", "100px", "140px"]}}/>
           <Text sx={{
             fontSize: ["28px", "32px", "40px", "48px"],
             fontWeight: "bold",
@@ -95,7 +96,7 @@ const Geotwo: NextPage = () => {
             <TaskTitle>{"▎1. 파주시 공간정보 고도화시스템"}</TaskTitle>
             <ContentText> {"노후화된 공간정보시스템을 개선하여 웹 기반 공간정보 통합관리체계, 다양한 업무에 공간정보 활용을 위한 사용자 맞춤형 공간정보체계 구축"}</ContentText>
             <Box sx={{ pl: 2 }}>
-              <ContentImage src={"/images/geotwo-uis.png"}/>
+              <ContentImage src={`${prefix}/images/geotwo-uis.png`}/>
               <ContentText>{"▪️ 기간 : \n 2020.06 ~ 2021.02"}</ContentText>
               <ContentText sx={{ mt: 2 }}>
                 {"▪️ 담당업무 : \n"}
@@ -128,7 +129,7 @@ const Geotwo: NextPage = () => {
             <TaskTitle>{"▎3. ShpEtl"}</TaskTitle>
             <ContentText> {"Shp파일을 DBMS에 로딩하여 공간테이블로 활용하거나 공간테이블을 Shp파일로 생성하여 \n"}
               {"백업 또는 타 시스템에 활용하기 위한 기능을 제공하는 웹 사이트"}</ContentText>
-            <ContentImage src={"/images/geotwo-shpetl.png"}/>
+            <ContentImage src={`${prefix}/images/geotwo-shpetl.png`}/>
             <ContentText>{"▪️ 기간 : \n 2019.10 ~ 2019.11"}</ContentText>
             <ContentText sx={{ mt: 2 }}>
               {"▪️ 담당업무 : \n"}
