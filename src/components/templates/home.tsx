@@ -56,14 +56,16 @@ export const Home: React.FunctionComponent<HomeProps> = () => {
   }, []);
 
   return (
-    <Flex sx={{
-      justifyContent: "center",
-      height: "100vh",
-      width: "100vw",
-      p: [`${CONTENT_PADDING}px`],
-      background: "#000000",
-      overflow: "hidden",
-    }}>
+    <Flex
+      id={"home"}
+      sx={{
+        justifyContent: "center",
+        height: "100vh",
+        width: "100vw",
+        p: [`${CONTENT_PADDING}px`],
+        background: "#000000",
+        overflow: "hidden",
+      }}>
       <Box
         sx={{
           width: "100%",

@@ -4,7 +4,7 @@ import { Flex, FlexProps, Icon } from "@components/atoms";
 
 export type IconButtonProps = FlexProps & {
   src: string;
-  size: number[];
+  size: number[] | number;
 };
 
 export const IconButton: React.FunctionComponent<IconButtonProps> = ({
@@ -15,7 +15,6 @@ export const IconButton: React.FunctionComponent<IconButtonProps> = ({
   return (
     <Flex {...props}>
       <Flex sx={{
-        mr: 2,
         p: 2,
         cursor: "pointer",
         borderRadius: "50%",

@@ -50,7 +50,7 @@ export const ProjectIntroduce: React.FunctionComponent<ProjectIntroduceProps> = 
         <Flex sx={{ justifyContent: "center" }}>
           {iconItems.map((item) => {
             return (
-              <IconButton key={item.src} src={item.src} size={[50, 60, 70]} onClick={() => window.open(item.url)}/>
+              <IconButton key={item.src} src={item.src} size={[50, 60, 70]} onClick={() => window.open(item.url)} sx={{ mr: 2 }}/>
             );
           })}
         </Flex>

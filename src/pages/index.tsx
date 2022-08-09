@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Box } from "@components/atoms";
+import { ScrollButton } from "@components/molecules";
 import {
   About, Career, Home, LayoutMain, Projects, Skills,
 } from "@components/templates";
@@ -33,6 +34,7 @@ const Main: NextPage = () => {
           <Projects/>
         </Box>
       </StyledBox>
+      <ScrollButton/>
     </LayoutMain>
   );
 };
