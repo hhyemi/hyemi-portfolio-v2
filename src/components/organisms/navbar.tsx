@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 
 import {
-  Box, Flex, FlexProps, Icon, Responsive,
+  Box, Flex, FlexProps, Icon, IconProps, Responsive, StyledLink, Text,
+  TextProps,
 } from "@components/atoms";
 import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@themes/main";
 
 export type NavbarProps = FlexProps & {};
+
+const NavbarTitle = (props: TextProps) => <Text
+  appearance={"black"}
+  variant={["s1", "h2"]}
+  sx={{ mb: 8, fontWeight: "bold" }}
+  {...props}
+/>;
+
+const StyledMenu = (props: FlexProps & {open: boolean}) => <Flex
+  sx={{
+    flexDirection: "column",
+    justifyContent: "center",
+    background: "pastel-yellow",
+    transform: props.open ? "translateY(0)" : "translateY(-100%)",
+    height: "100vh",
+    width: "100vw",
+    textAlign: "center",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    transition: "transform 0.3s ease-in-out",
+  }}
+  {...props}
+/>;
 
 const ContainerFlex = (props: FlexProps) => <Flex
   sx={{
@@ -20,10 +45,11 @@ const ContainerFlex = (props: FlexProps) => <Flex
   {...props}
 />;
 
-const TopNavHamburger = (props: FlexProps) => {
+const TopNavHamburger = (props: FlexProps & {onClick: IconProps["onClick"]; open: boolean}) => {
   return (
     <Flex
       sx={{
+        zIndex: 99,
         mr: 2,
         borderRadius: "50%",
         cursor: "pointer",
@@ -35,22 +61,62 @@ const TopNavHamburger = (props: FlexProps) => {
         },
       }}
       {...props}>
-      <Icon src={"/images/menu-hamburger.svg"} size={32}/>
+      <Icon
+        src={props.open ? "/images/close.svg" : "/images/menu-hamburger.svg"}
+        onClick={props.onClick}
+        size={props.open ? 22 : 32}
+      />
     </Flex>
   );
 };
 
 export const Navbar: React.FunctionComponent<NavbarProps> = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleClose = useCallback(() => {
+    setOpen(!open);
+  }, [open]);
+
   return (
     <ContainerFlex>
       <Responsive mdAndDown>
-        <TopNavHamburger/>
+        <TopNavHamburger
+          open={open}
+          onClick={handleClose}
+        />
         <Box sx={{ flex: "1 0 auto" }}/>
       </Responsive>
 
       <Responsive lgAndUp>
         <Box sx={{ flex: "1 0 auto" }}/>
       </Responsive>
+
+      <StyledMenu open={open}>
+        <Box onClick={handleClose}>
+          <StyledLink
+            href={"/#about"}>
+            <NavbarTitle>{"ABOUT"}</NavbarTitle>
+          </StyledLink>
+        </Box>
+        <Box onClick={handleClose}>
+          <StyledLink
+            href={"/#skills"}>
+            <NavbarTitle>{"SKILLS"}</NavbarTitle>
+          </StyledLink>
+        </Box>
+        <Box onClick={handleClose}>
+          <StyledLink
+            href={"/#career"}>
+            <NavbarTitle>{"CAREER"}</NavbarTitle>
+          </StyledLink>
+        </Box>
+        <Box onClick={handleClose}>
+          <StyledLink
+            href={"/#projects"}>
+            <NavbarTitle>{"PROJECTS"}</NavbarTitle>
+          </StyledLink>
+        </Box>
+      </StyledMenu>
     </ContainerFlex>
   );
 };

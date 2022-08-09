@@ -3,9 +3,8 @@ import React, { useRef } from "react";
 import {
   Box, Flex, StyledLink, Text, TextProps,
 } from "@components/atoms";
+import { Cursor } from "@components/molecules";
 import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@themes/main";
-
-import { Cursor } from "../molecules";
 
 export const SIDEBAR_WIDTH = "13%";
 

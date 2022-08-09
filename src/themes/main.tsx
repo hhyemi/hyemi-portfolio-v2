@@ -237,6 +237,7 @@ export const palette = {
   "lime-700": "#86b700",
   "lime-800": "#689300",
   "lime-900": "#537a00",
+  "pastel-yellow": "#fcfcf1",
   "pastel-pink": "#f9e1e4",
   "pastel-blue": "#d9f4fa",
   ...transparentPalette,
