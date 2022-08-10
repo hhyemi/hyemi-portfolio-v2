@@ -70,7 +70,7 @@ export const Cursor: React.FunctionComponent<CursorProps> = ({
         mixBlendMode: hasBackgroundImage ? "inherit" : "difference",
         transform: linkHovered ? `translate(-50%, -50%) scale(${scale})` : "translate(-50%, -50%)",
         backgroundColor: linkHovered ? "#ffffff" : "black",
-        backgroundImage: hasBackgroundImage ? `url('${prefix}images/plus.png')` : undefined,
+        backgroundImage: hasBackgroundImage ? `url('${prefix}/images/plus.png')` : undefined,
         backgroundSize: "100%",
       }}
     />
