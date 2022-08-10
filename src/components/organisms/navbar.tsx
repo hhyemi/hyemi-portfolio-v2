@@ -97,25 +97,25 @@ export const Navbar: React.FunctionComponent<NavbarProps> = () => {
       <StyledMenu open={open}>
         <Box onClick={handleClose}>
           <StyledLink
-            href={"/#about"}>
+            href={`${prefix}/#about`}>
             <NavbarTitle>{"ABOUT"}</NavbarTitle>
           </StyledLink>
         </Box>
         <Box onClick={handleClose}>
           <StyledLink
-            href={"/#skills"}>
+            href={`${prefix}/#skills`}>
             <NavbarTitle>{"SKILLS"}</NavbarTitle>
           </StyledLink>
         </Box>
         <Box onClick={handleClose}>
           <StyledLink
-            href={"/#career"}>
+            href={`${prefix}/#career`}>
             <NavbarTitle>{"CAREER"}</NavbarTitle>
           </StyledLink>
         </Box>
         <Box onClick={handleClose}>
           <StyledLink
-            href={"/#projects"}>
+            href={`${prefix}/#projects`}>
             <NavbarTitle>{"PROJECTS"}</NavbarTitle>
           </StyledLink>
         </Box>

@@ -5,6 +5,7 @@ import { Flex } from "@components/atoms/flex";
 import { StyledLink } from "@components/atoms/styled-link";
 import { Text, TextProps } from "@components/atoms/text";
 import { Cursor } from "@components/molecules/cursor";
+import { prefix } from "@config/config";
 import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@themes/main";
 
 export const SIDEBAR_WIDTH = "13%";
@@ -52,25 +53,25 @@ export const Sidebar: React.FunctionComponent<DrawerProps> = () => {
         <Box sx={{ position: "fixed", cursor: "pointer" }}>
           <Box ref={aboutElement}>
             <StyledLink
-              href={"/#about"}>
+              href={`${prefix}/#about`}>
               <Title>{"ABOUT"}</Title>
             </StyledLink>
           </Box>
           <Box ref={skillsElement}>
             <StyledLink
-              href={"/#skills"}>
+              href={`${prefix}/#skills`}>
               <Title>{"SKILLS"}</Title>
             </StyledLink>
           </Box>
           <Box ref={careerElement}>
             <StyledLink
-              href={"/#career"}>
+              href={`${prefix}/#career`}>
               <Title>{"CAREER"}</Title>
             </StyledLink>
           </Box>
           <Box ref={projectsElement}>
             <StyledLink
-              href={"/#projects"}>
+              href={`${prefix}/#projects`}>
               <Title>{"PROJECTS"}</Title>
             </StyledLink>
           </Box>
