@@ -1,10 +1,13 @@
 import React from "react";
 
-import {
-  Box, Flex, Image, ImageProps, StyledLink, Text, TextProps,
-} from "@components/atoms";
-import { CardList, SectionSkills } from "@components/molecules";
-import { LayoutDetail } from "@components/templates";
+import { Box } from "@components/atoms/box";
+import { Flex } from "@components/atoms/flex";
+import { Image, ImageProps } from "@components/atoms/image";
+import { StyledLink } from "@components/atoms/styled-link";
+import { Text, TextProps } from "@components/atoms/text";
+import { CardList } from "@components/molecules/card-list";
+import { SectionSkills } from "@components/molecules/section-skills";
+import { LayoutDetail } from "@components/templates/layout-detail";
 import { prefix } from "@config/config";
 import { CONTENT_MARGIN_BOTTOM } from "@themes/main";
 import type { NextPage } from "next";

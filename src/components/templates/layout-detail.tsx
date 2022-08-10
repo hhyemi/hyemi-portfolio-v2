@@ -1,12 +1,10 @@
 import React from "react";
 
-import {
-  Box, Flex, FlexProps,
-} from "@components/atoms";
-import {
-  ImageHeader, SIDEBAR_WIDTH,
-} from "@components/organisms";
-import { LayoutMain } from "@components/templates";
+import { Box } from "@components/atoms/box";
+import { Flex, FlexProps } from "@components/atoms/flex";
+import { ImageHeader } from "@components/organisms/image-header";
+import { SIDEBAR_WIDTH } from "@components/organisms/sidebar";
+import { LayoutMain } from "@components/templates/layout-main";
 
 export type LayoutDetailProps = FlexProps & {
   headerImage: string;

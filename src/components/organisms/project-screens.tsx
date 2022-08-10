@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
 
-import {
-  Box, FlexProps, Image, Text,
-} from "@components/atoms";
-import { Title } from "@components/templates";
+import { Box } from "@components/atoms/box";
+import { FlexProps } from "@components/atoms/flex";
+import { Image } from "@components/atoms/image";
+import { Text } from "@components/atoms/text";
+import { Title } from "@components/templates/projects";
 import { CONTENT_MARGIN_BOTTOM } from "@themes/main";
 
 export type ProjectScreensProps = FlexProps & {

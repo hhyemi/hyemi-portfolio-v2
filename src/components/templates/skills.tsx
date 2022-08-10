@@ -1,9 +1,9 @@
 import React from "react";
 
-import {
-  Box, Flex, Text,
-} from "@components/atoms";
-import { List } from "@components/molecules";
+import { Box } from "@components/atoms/box";
+import { Flex } from "@components/atoms/flex";
+import { Text } from "@components/atoms/text";
+import { List } from "@components/molecules/list";
 import { useScrollFadeIn } from "@hooks";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 

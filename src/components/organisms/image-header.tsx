@@ -1,8 +1,8 @@
 import React from "react";
 
-import {
-  Box, Flex, FlexProps, Image,
-} from "@components/atoms";
+import { Box } from "@components/atoms/box";
+import { Flex, FlexProps } from "@components/atoms/flex";
+import { Image } from "@components/atoms/image";
 
 export type ImageHeaderProps = FlexProps & {
   src: string;

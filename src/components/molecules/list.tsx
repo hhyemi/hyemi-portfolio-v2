@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 
-import {
-  Box, Divider, DividerProps, Flex, FlexProps, Text, TextProps,
-} from "@components/atoms";
+import { Box } from "@components/atoms/box";
+import { Divider, DividerProps } from "@components/atoms/divider";
+import { Flex, FlexProps } from "@components/atoms/flex";
+import { Text, TextProps } from "@components/atoms/text";
 
 export type ListProps = FlexProps & {
   list: {title: string; items: string[]};

@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
 
-import {
-  Box, Flex, FlexProps, Text,
-} from "@components/atoms";
-import { CardList, IconButton } from "@components/molecules";
-import { ContentText, Title } from "@components/templates";
+import { Box } from "@components/atoms/box";
+import { Flex, FlexProps } from "@components/atoms/flex";
+import { Text } from "@components/atoms/text";
+import { CardList } from "@components/molecules/card-list";
+import { IconButton } from "@components/molecules/icon-button";
+import { ContentText, Title } from "@components/templates/projects";
 import { CONTENT_MARGIN_BOTTOM } from "@themes/main";
 
 export type ProjectIntroduceProps = FlexProps & {

@@ -1,7 +1,7 @@
 import React, { forwardRef, useCallback, useMemo } from "react";
 import { ReactSVG } from "react-svg";
 
-import { Flex, FlexProps } from "@components/atoms";
+import { Flex, FlexProps } from "@components/atoms/flex";
 import { useResponsive } from "@hooks";
 import { ResponsiveStyleValue } from "theme-ui";
 

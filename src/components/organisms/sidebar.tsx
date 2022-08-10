@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
 
-import {
-  Box, Flex, StyledLink, Text, TextProps,
-} from "@components/atoms";
-import { Cursor } from "@components/molecules";
+import { Box } from "@components/atoms/box";
+import { Flex } from "@components/atoms/flex";
+import { StyledLink } from "@components/atoms/styled-link";
+import { Text, TextProps } from "@components/atoms/text";
+import { Cursor } from "@components/molecules/cursor";
 import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@themes/main";
 
 export const SIDEBAR_WIDTH = "13%";

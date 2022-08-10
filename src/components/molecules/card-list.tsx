@@ -1,8 +1,8 @@
 import React, { ReactChild } from "react";
 
-import {
-  Card, CardProps, Flex, FlexProps, Text, TextProps,
-} from "@components/atoms";
+import { Card, CardProps } from "@components/atoms/card";
+import { Flex, FlexProps } from "@components/atoms/flex";
+import { Text, TextProps } from "@components/atoms/text";
 
 export type CardListProps = CardProps & {
   items: {title: string; value: string | ReactChild}[];

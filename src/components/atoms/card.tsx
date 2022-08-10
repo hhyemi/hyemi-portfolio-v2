@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 
-import { Box, BoxProps } from "@components/atoms";
+import { Box, BoxProps } from "@components/atoms/box";
 
 export type CardProps = BoxProps & {};
 

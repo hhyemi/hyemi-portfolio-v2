@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Box, FlexProps } from "@components/atoms";
-import { ContentText, Title } from "@components/templates";
+import { Box } from "@components/atoms/box";
+import { FlexProps } from "@components/atoms/flex";
+import { ContentText, Title } from "@components/templates/projects";
 import { CONTENT_MARGIN_BOTTOM } from "@themes/main";
 
 export type ProjectReviewProps = FlexProps & {

@@ -2,7 +2,8 @@ import React, {
   RefObject, useCallback, useEffect, useMemo, useState,
 } from "react";
 
-import { Box, FlexProps } from "@components/atoms";
+import { Box } from "@components/atoms/box";
+import { FlexProps } from "@components/atoms/flex";
 import { prefix } from "@config/config";
 
 export type CursorProps = FlexProps & {

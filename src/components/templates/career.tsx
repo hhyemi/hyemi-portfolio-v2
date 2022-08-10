@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import { SectionCareer } from "@components/molecules";
+import { SectionCareer } from "@components/molecules/section-career";
 import { prefix } from "@config/config";
 
 export type CareerProps = {};

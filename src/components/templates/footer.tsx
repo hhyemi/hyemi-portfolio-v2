@@ -1,9 +1,10 @@
 import React from "react";
 
-import {
-  Box, Flex, FlexProps, Image, Text,
-} from "@components/atoms";
-import { IconButton } from "@components/molecules";
+import { Box } from "@components/atoms/box";
+import { Flex, FlexProps } from "@components/atoms/flex";
+import { Image } from "@components/atoms/image";
+import { Text } from "@components/atoms/text";
+import { IconButton } from "@components/molecules/icon-button";
 import { prefix } from "@config/config";
 import { keyframes } from "@emotion/react";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";

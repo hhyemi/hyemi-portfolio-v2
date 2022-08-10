@@ -1,8 +1,9 @@
 import React from "react";
 
-import {
-  Box, Flex, Image, Text, TextProps,
-} from "@components/atoms";
+import { Box } from "@components/atoms/box";
+import { Flex } from "@components/atoms/flex";
+import { Image } from "@components/atoms/image";
+import { Text, TextProps } from "@components/atoms/text";
 import { prefix } from "@config/config";
 import { useScrollFadeIn } from "@hooks";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";

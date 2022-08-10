@@ -1,9 +1,13 @@
 import React, { useCallback, useRef } from "react";
 
-import {
-  Box, Button, Card, CardProps, Divider, Flex, FlexProps, Image, Text, TextProps,
-} from "@components/atoms";
-import { Cursor } from "@components/molecules";
+import { Box } from "@components/atoms/box";
+import { Button } from "@components/atoms/button";
+import { Card, CardProps } from "@components/atoms/card";
+import { Divider } from "@components/atoms/divider";
+import { Flex, FlexProps } from "@components/atoms/flex";
+import { Image } from "@components/atoms/image";
+import { Text, TextProps } from "@components/atoms/text";
+import { Cursor } from "@components/molecules/cursor";
 import { useScrollFadeIn } from "@hooks";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 import { useRouter } from "next/dist/client/router";

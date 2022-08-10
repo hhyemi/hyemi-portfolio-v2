@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 
-import { Text, TextProps } from "@components/atoms";
-import { SectionProject } from "@components/molecules";
+import { Text, TextProps } from "@components/atoms/text";
+import { SectionProject } from "@components/molecules/section-project";
 import { prefix } from "@config/config";
 
 export type ProjectsProps = {};

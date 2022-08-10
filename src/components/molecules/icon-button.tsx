@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Flex, FlexProps, Icon } from "@components/atoms";
+import { Flex, FlexProps } from "@components/atoms/flex";
+import { Icon } from "@components/atoms/icon";
 
 export type IconButtonProps = FlexProps & {
   src: string;

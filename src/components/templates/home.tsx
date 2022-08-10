@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import ReactTyped from "react-typed";
 
-import {
-  Box, BoxProps, Flex, Text,
-} from "@components/atoms";
+import { Box, BoxProps } from "@components/atoms/box";
+import { Flex } from "@components/atoms/flex";
+import { Text } from "@components/atoms/text";
 import { prefix } from "@config/config";
 import {
   CONTENT_PADDING, MD_AND_UP_CONTENT_TOP, SM_CONTENT_TOP,

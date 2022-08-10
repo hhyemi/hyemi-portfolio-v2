@@ -1,9 +1,11 @@
 import React, { useCallback, useState } from "react";
 
-import {
-  Box, Flex, FlexProps, Icon, IconProps, Responsive, StyledLink, Text,
-  TextProps,
-} from "@components/atoms";
+import { Box } from "@components/atoms/box";
+import { Flex, FlexProps } from "@components/atoms/flex";
+import { Icon, IconProps } from "@components/atoms/icon";
+import { Responsive } from "@components/atoms/responsive";
+import { StyledLink } from "@components/atoms/styled-link";
+import { Text, TextProps } from "@components/atoms/text";
 import { prefix } from "@config/config";
 import { MD_AND_UP_TOP_NAV_HEIGHT, SM_TOP_NAV_HEIGHT } from "@themes/main";
 

@@ -1,9 +1,11 @@
 import React, { useCallback, useRef } from "react";
 
-import {
-  Box, Button, Flex, FlexProps, Image, Text,
-} from "@components/atoms";
-import { Cursor } from "@components/molecules";
+import { Box } from "@components/atoms/box";
+import { Button } from "@components/atoms/button";
+import { Flex, FlexProps } from "@components/atoms/flex";
+import { Image } from "@components/atoms/image";
+import { Text } from "@components/atoms/text";
+import { Cursor } from "@components/molecules/cursor";
 import { useScrollFadeIn } from "@hooks";
 import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 import { useRouter } from "next/dist/client/router";

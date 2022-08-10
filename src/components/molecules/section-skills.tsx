@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 
-import {
-  Box, Flex, FlexProps, Text, TextProps,
-} from "@components/atoms";
+import { Box } from "@components/atoms/box";
+import { Flex, FlexProps } from "@components/atoms/flex";
+import { Text, TextProps } from "@components/atoms/text";
 import { CONTENT_MARGIN_BOTTOM } from "@themes/main";
 
 const Title = (props: TextProps) => <Text

@@ -1,8 +1,10 @@
 import React from "react";
 
-import { SectionSkills } from "@components/molecules";
-import { ProjectIntroduce, ProjectReview, ProjectScreens } from "@components/organisms";
-import { LayoutDetail } from "@components/templates";
+import { SectionSkills } from "@components/molecules/section-skills";
+import { ProjectIntroduce } from "@components/organisms/project-introduce";
+import { ProjectReview } from "@components/organisms/project-review";
+import { ProjectScreens } from "@components/organisms/project-screens";
+import { LayoutDetail } from "@components/templates/layout-detail";
 import { prefix } from "@config/config";
 import type { NextPage } from "next";
 

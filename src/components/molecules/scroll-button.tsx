@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import {
-  Box, BoxProps, StyledLink,
-} from "@components/atoms";
-import { IconButton } from "@components/molecules";
+import { Box, BoxProps } from "@components/atoms/box";
+import { StyledLink } from "@components/atoms/styled-link";
+import { IconButton } from "@components/molecules/icon-button";
 import { prefix } from "@config/config";
 
 export type ScrollButtonProps = BoxProps & {};

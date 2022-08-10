@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, BoxProps } from "@components/atoms";
+import { Box, BoxProps } from "@components/atoms/box";
 import styled from "@emotion/styled";
 import theme from "@themes/main";
 import { variant, VariantArgs } from "styled-system";
