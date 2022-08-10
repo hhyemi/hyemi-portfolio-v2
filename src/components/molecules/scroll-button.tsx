@@ -13,7 +13,7 @@ export const ScrollButton: React.FunctionComponent<ScrollButtonProps> = ({
   return (
     <Box>
       <StyledLink
-        href={"/#home"}>
+        href={`${prefix}/#home`}>
         <IconButton
           src={`${prefix}/images/scroll-up.svg`}
           size={[40, 60]}
