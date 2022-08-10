@@ -49,9 +49,9 @@ export const Skills: React.FunctionComponent<SkillsProps> = () => {
       <Box sx={{ width: SECTION_WIDTH }}>
         <Text
           ref={scrollTitleRef}
-          variant={["h3", "h2", "h1"]}
+          variant={["h5", "h2", "h1"]}
           sx={{
-            pb: 4,
+            pb: [2, 4],
             fontFamily: "title",
             letterSpacing: "0.1em",
             ...scrollTitleStyle,

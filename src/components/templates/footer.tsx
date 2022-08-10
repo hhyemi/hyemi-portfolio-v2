@@ -69,7 +69,7 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
             variant={["h4", null, "h3"]}
             sx={{
               pb: 4,
-              pt: 20,
+              pt: [10, 24],
               fontFamily: "title",
               letterSpacing: "0.1em",
             }}>
@@ -77,7 +77,7 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
           </Text>
 
           <Box>
-            <Flex sx={{ mb: 24 }}>
+            <Flex sx={{ mb: [0, 24]}}>
               <IconButton
                 src={`${prefix}/images/email.svg`}
                 size={[30, 40]}

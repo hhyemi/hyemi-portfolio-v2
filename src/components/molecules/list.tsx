@@ -10,18 +10,18 @@ export type ListProps = FlexProps & {
 };
 
 const Title = (props: TextProps) => <Text
-  variant={["s1", "h3"]}
+  variant={["p1", "s1", "h3"]}
   sx={{ mt: [0, 3]}}
   {...props}
 />;
 
 const Subtitle = (props: TextProps) => <Text
-  variant={["s2", "s1"]}
+  variant={["p2", "s2", "s1"]}
   {...props}
 />;
 
 const ListDivider = (props: DividerProps) => <Divider
-  sx={{ my: "17px" }}
+  sx={{ my: ["11px", "17px"]}}
   {...props}
 />;
 

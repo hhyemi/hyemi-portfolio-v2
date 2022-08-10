@@ -49,24 +49,23 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
 
         <Text
           ref={scrollTitleRef}
-          variant={["h3", "h2", "h1"]}
           sx={{
             fontFamily: "title",
             letterSpacing: "0.1em",
             color: "pastel-pink",
-            fontSize: "100px",
+            fontSize: ["40px", "100px"],
             ...scrollTitleStyle,
           }}>
           {`0${index + 1}`}
         </Text>
         <Text
           className={"project-text"}
-          variant={["h3", "h2", "h1"]}
+          variant={["h5", "h2", "h1"]}
           sx={{
             fontFamily: "title",
             letterSpacing: "0.1em",
             position: "relative",
-            top: "-78px",
+            top: ["-38px", "-78px"],
           }}>
           {menuTitle}
         </Text>
@@ -84,18 +83,19 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
               cursor: "pointer",
               flexDirection: ["column", null, "row"],
             }}>
-            <Image src={image} sx={{ width: ["360px", null, "460px"], mb: [4, null, 0]}}/>
+            <Image src={image} sx={{ width: ["250px", "360px", null, "460px"], mb: [4, null, 0]}}/>
             <Flex sx={{
               ml: [0, null, 5], alignSelf: "center", flexDirection: "column", alignItems: ["center", null, "flex-start"],
             }}>
               <Text variant={["h5", "h4", "h3", "h2"]} sx={{ fontWeight: "bold", mb: 1 }}>{title}</Text>
-              <Text variant={["s2", "s1", "s1"]}>
+              <Text variant={["p1", "s2", "s1", "s1"]}>
                 {subtitle}
               </Text>
               <Button
                 variant={"white"}
                 appearance={"outlined"}
-                sx={{ mt: 3 }}
+                size={["sm", "md"]}
+                sx={{ mt: [1, 3]}}
               >
                 {"DETAILS"}
               </Button>

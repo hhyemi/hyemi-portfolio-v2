@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { Box, BoxProps } from "@components/atoms/box";
 import { StyledLink } from "@components/atoms/styled-link";
@@ -16,11 +16,11 @@ export const ScrollButton: React.FunctionComponent<ScrollButtonProps> = ({
         href={"/#home"}>
         <IconButton
           src={`${prefix}/images/scroll-up.svg`}
-          size={60}
+          size={[40, 60]}
           sx={{
             position: "fixed",
-            bottom: "40px",
-            right: "40px",
+            bottom: ["10px", "40px"],
+            right: ["10px", "40px"],
           }}
           {...props}
         />

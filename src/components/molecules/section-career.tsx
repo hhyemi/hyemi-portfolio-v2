@@ -24,7 +24,7 @@ export type SectionCareerProps = FlexProps & {
 };
 
 const CareerTitle = (props: TextProps) => <Text
-  variant={"s2"}
+  variant={["p2", "s2"]}
   appearance={"gray"}
   sx={{
     width: "100px",
@@ -35,7 +35,7 @@ const CareerTitle = (props: TextProps) => <Text
 />;
 
 const CareerValue = (props: TextProps) => <Text
-  variant={"s2"}
+  variant={["p2", "s2"]}
   sx={{ lineHeight: 2 }}
   {...props}
 />;
@@ -43,14 +43,14 @@ const CareerValue = (props: TextProps) => <Text
 const CareerFlex = (props: FlexProps) => <Flex
   sx={{
     flexDirection: ["column", null, "row", null],
-    mt: 2,
+    mt: [1, 2],
   }}
   {...props}
 />;
 
 const CareerCard = (props: CardProps) => <Card
   sx={{
-    pt: 3, pb: 5, px: 3, mb: 7,
+    pt: [2, 3], pb: [3, 5], px: 3, mb: 7,
   }}
   {...props}
 />;
@@ -92,23 +92,22 @@ export const SectionCareer: React.FunctionComponent<SectionCareerProps> = ({
 
         <Text
           ref={scrollTitleRef}
-          variant={["h3", "h2", "h1"]}
           sx={{
             fontFamily: "title",
             letterSpacing: "0.1em",
             color: "pastel-blue",
-            fontSize: "100px",
+            fontSize: ["40px", "100px"],
             ...scrollTitleStyle,
           }}>
           {`0${index + 1}`}
         </Text>
         <Text
-          variant={["h3", "h2", "h1"]}
+          variant={["h5", "h2", "h1"]}
           sx={{
             fontFamily: "title",
             letterSpacing: "0.1em",
             position: "relative",
-            top: "-78px",
+            top: ["-38px", "-78px"],
           }}>
           {menuTitle}
         </Text>
@@ -118,11 +117,11 @@ export const SectionCareer: React.FunctionComponent<SectionCareerProps> = ({
             <Box ref={element}>
               <Flex sx={{ alignItems: "flex-start", mb: 1 }}>
                 <Image src={image} sx={{ width: ["80px", "120px"]}}/>
-                <Text variant={["s1", "h5", "h4"]} sx={{ ml: 1, fontWeight: "bold" }}>{title}</Text>
+                <Text variant={["p1", "s1", "h5", "h4"]} sx={{ ml: 1, fontWeight: "bold" }}>{title}</Text>
               </Flex>
               <Box>
                 <Box>
-                  <Text>
+                  <Text variant={["p2", "p1"]}>
                     {subtitle}
                   </Text>
                   <Divider sx={{ mt: 2 }}/>
@@ -147,9 +146,12 @@ export const SectionCareer: React.FunctionComponent<SectionCareerProps> = ({
                   variant={"white"}
                   appearance={"outlined"}
                   onClick={handleClick}
-                  sx={{ mt: 3 }}
+                  size={["sm", "md"]}
+                  sx={{ mt: [1, 3]}}
                 >
-                  {"DETAILS"}
+                  <Text variant={["p2", "p1"]}>
+                    {"DETAILS"}
+                  </Text>
                 </Button>
               </Flex>
             </Box>

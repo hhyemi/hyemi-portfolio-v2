@@ -11,7 +11,7 @@ import { CONTENT_PADDING, SECTION_WIDTH } from "@themes/main";
 export type AboutProps = {};
 
 const AboutText = (props: TextProps) => <Text
-  variant={["p1", "s2", null, "s1"]}
+  variant={["p2", "s2", null, "s1"]}
   sx={{
     width: "112px",
     lineHeight: 1.8,
@@ -48,9 +48,9 @@ export const About: React.FunctionComponent<AboutProps> = () => {
       <Box sx={{ width: SECTION_WIDTH }}>
         <Text
           ref={scrollTitleRef}
-          variant={["h3", "h2", "h1"]}
+          variant={["h5", "h2", "h1"]}
           sx={{
-            pb: 4,
+            pb: [2, 4],
             fontFamily: "title",
             letterSpacing: "0.1em",
             ...scrollTitleStyle,
@@ -68,10 +68,10 @@ export const About: React.FunctionComponent<AboutProps> = () => {
                 minWidth: ["40%", "30%"],
                 height: "auto",
                 mr: [3, 5, null, 7],
-                mb: [3, 5, 0],
+                mb: [2, 5, 0],
               }}/>
             <Box>
-              <Text variant={["p1", "s2", null, "s1"]} sx={{ width: "auto", lineHeight: 1.8, mb: 2 }}>
+              <Text variant={["p2", "s2", null, "s1"]} sx={{ width: "auto", lineHeight: 1.8, mb: 2 }}>
                 {"안녕하세요 ☕️ 🐈 \n"}
                 {"Java Spring과 javaScript로 풀스택으로 일한 경험과 \n React를 사용하는 프론트엔드로 근무한 경험이 있는 "}
                 {<b>{"3년차 개발자"}</b>}
@@ -90,7 +90,7 @@ export const About: React.FunctionComponent<AboutProps> = () => {
               {aboutMeItems.map((el) => {
                 return (
                   <Flex key={el.value}>
-                    <AboutText appearance={"gray"} sx={{ width: "112px" }}>
+                    <AboutText appearance={"gray"} sx={{ width: ["80px", "112px"]}}>
                       {el.title}
                     </AboutText>
                     <AboutText sx={{ width: "auto" }}>
