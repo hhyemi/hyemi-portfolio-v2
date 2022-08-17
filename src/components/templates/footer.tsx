@@ -69,7 +69,6 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
             variant={["h4", null, "h3"]}
             sx={{
               pb: 4,
-              pt: [10, 24],
               fontFamily: "title",
               letterSpacing: "0.1em",
             }}>

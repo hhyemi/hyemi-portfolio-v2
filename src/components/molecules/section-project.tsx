@@ -72,7 +72,10 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
 
         <Flex
           ref={scrollContentRef}
-          sx={{ ...scrollContentStyle }}>
+          sx={{
+            justifyContent: "center",
+            ...scrollContentStyle,
+          }}>
           <Flex
             ref={element}
             onClick={handleClick}
@@ -87,8 +90,8 @@ export const SectionProject: React.FunctionComponent<SectionProjectProps> = ({
             <Flex sx={{
               ml: [0, null, 5], alignSelf: "center", flexDirection: "column", alignItems: ["center", null, "flex-start"],
             }}>
-              <Text variant={["h5", "h4", "h3", "h2"]} sx={{ fontWeight: "bold", mb: 1 }}>{title}</Text>
-              <Text variant={["p1", "s2", "s1", "s1"]}>
+              <Text variant={["s1", "h4", "h3", "h2"]} sx={{ fontWeight: "bold", mb: 1 }}>{title}</Text>
+              <Text variant={["p2", "s2", "s1", "s1"]}>
                 {subtitle}
               </Text>
               <Button

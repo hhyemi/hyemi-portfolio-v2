@@ -74,7 +74,7 @@ const cardItems = [
 
 const Qmit: NextPage = () => {
   return (
-    <LayoutDetail headerImage={`${prefix}/images/qmit-main.avif`}>
+    <LayoutDetail headerImage={`${prefix}/images/qmit-main.png`}>
 
       <Box sx={{ my: 6, mb: 15 }}>
         <Flex sx={{ mb: 1 }}>
