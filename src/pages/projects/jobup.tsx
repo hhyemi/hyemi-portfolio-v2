@@ -57,7 +57,7 @@ const functionItems = [
 
 const Jobup: NextPage = () => {
   return (
-    <LayoutDetail headerImage={`${prefix}/images/jobup-main.png`}>
+    <LayoutDetail headerImage={`${prefix}/images/jobup-main.jpg`}>
 
       <ProjectIntroduce
         title={"job-up"}

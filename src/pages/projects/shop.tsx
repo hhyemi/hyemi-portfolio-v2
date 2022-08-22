@@ -47,7 +47,7 @@ const functionItems = [
 
 const Shop: NextPage = () => {
   return (
-    <LayoutDetail headerImage={`${prefix}/images/shop-main.png`}>
+    <LayoutDetail headerImage={`${prefix}/images/shop-main.jpg`}>
 
       <ProjectIntroduce
         title={"Hyemi Shop"}

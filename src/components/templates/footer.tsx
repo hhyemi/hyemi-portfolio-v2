@@ -52,77 +52,80 @@ const imageItems = [
 
 export const Footer: React.FunctionComponent<FooterProps> = () => {
   return (
-    <Box sx={{ height: "100vh" }}>
-      <Flex
-        sx={{
-          justifyContent: "center",
-          alignSelf: "center",
-          alignItems: "center",
-          py: 4,
-          ml: [0, null, "100px"],
-          p: `${CONTENT_PADDING}px`,
-        }}
-      >
-
-        <Box sx={{ width: SECTION_WIDTH }}>
-          <Text
-            variant={["h4", null, "h3"]}
-            sx={{
-              pb: 4,
-              fontFamily: "title",
-              letterSpacing: "0.1em",
-            }}>
-            {"CONTACT"}
-          </Text>
-
-          <Box>
-            <Flex sx={{ mb: [0, 24]}}>
-              <IconButton
-                src={`${prefix}/images/email.svg`}
-                size={[30, 40]}
-                onClick={() => window.open("mailto:dlgpal9508@gmail.com")}
-              />
-              <IconButton
-                src={`${prefix}/images/github.svg`}
-                size={[30, 40]}
-                onClick={() => window.open("https://github.com/hhyemi")}
-              />
-            </Flex>
-          </Box>
-        </Box>
-      </Flex>
-      <Box sx={{
-        height: "300px",
-        margin: "auto",
-        position: "relative",
-        width: "100vw",
-        display: "grid",
-        placeItems: "center",
-        overflow: "hidden",
-      }}>
+    <Flex sx={{ height: "100vh", alignItems: "center" }}>
+      <Box>
         <Flex
           sx={{
-            width: "calc(400px * 18)",
-            animation: `${boxFade} 50s linear infinite`,
-          }}>
-          {imageItems.map((item) => {
-            return (
-              <ImageFlex key={item}>
-                <Image src={item}/>
-              </ImageFlex>
-            );
-          })}
+            justifyContent: "center",
+            alignSelf: "center",
+            alignItems: "center",
+            py: 4,
+            ml: [0, null, "100px"],
+            p: `${CONTENT_PADDING}px`,
+          }}
+        >
+          <Box sx={{ width: SECTION_WIDTH }}>
+            <Text
+              variant={["h4", null, "h3"]}
+              sx={{
+                pb: 4,
+                fontFamily: "title",
+                letterSpacing: "0.1em",
+              }}>
+              {"CONTACT"}
+            </Text>
+
+            <Box>
+              <Flex sx={{ mb: [0, 24]}}>
+                <IconButton
+                  src={`${prefix}/images/email.svg`}
+                  size={[30, 40]}
+                  onClick={() => window.open("mailto:dlgpal9508@gmail.com")}
+                />
+                <IconButton
+                  src={`${prefix}/images/github.svg`}
+                  size={[30, 40]}
+                  onClick={() => window.open("https://github.com/hhyemi")}
+                />
+              </Flex>
+            </Box>
+          </Box>
         </Flex>
+        <Box sx={{
+          height: "300px",
+          margin: "auto",
+          position: "relative",
+          width: "100vw",
+          display: "grid",
+          placeItems: "center",
+          overflow: "hidden",
+        }}>
+          <Flex
+            sx={{
+              width: "calc(400px * 18)",
+              animation: `${boxFade} 50s linear infinite`,
+            }}>
+            {imageItems.map((item) => {
+              return (
+                <ImageFlex key={item}>
+                  <Image src={item}/>
+                </ImageFlex>
+              );
+            })}
+          </Flex>
+        </Box>
+
+        <Box sx={{
+          padding: "2rem 0",
+          bottom: 0,
+          textAlign: "center",
+        }}>
+          <Text variant={["l1", "p2", "p1"]}>
+            {"© COPYRIGHT 2022. DEVELOPER PORTFOLIO - BY HYEMI"}
+          </Text>
+        </Box>
+
       </Box>
-      <Box sx={{
-        padding: "2rem 0",
-        bottom: 0,
-        textAlign: "center",
-      }}>
-        <Text>
-          {"© COPYRIGHT 2022. DEVELOPER PORTFOLIO - BY HYEMI"}
-        </Text>
-      </Box>
-    </Box>
+    </Flex>
   );
 };
