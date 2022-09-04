@@ -40,7 +40,7 @@ const imageItems = [
   `${prefix}/images/footer-8.jpg`,
   `${prefix}/images/footer-9.jpg`,
   `${prefix}/images/footer-10.jpg`,
-  `${prefix}/images/footer-11.jpg`,
+  `${prefix}/images/footer-11.JPG`,
   `${prefix}/images/footer-12.jpg`,
   `${prefix}/images/footer-13.jpg`,
   `${prefix}/images/footer-14.jpg`,
