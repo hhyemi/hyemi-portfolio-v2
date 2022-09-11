@@ -1,10 +1,11 @@
-import React from "react";
+import React, { ReactChild } from "react";
 
 import { SectionSkills } from "@components/molecules/section-skills";
 import { ProjectIntroduce } from "@components/organisms/project-introduce";
 import { ProjectReview } from "@components/organisms/project-review";
 import { ProjectScreens } from "@components/organisms/project-screens";
 import { LayoutDetail } from "@components/templates/layout-detail";
+import { ContentText } from "@components/templates/projects";
 import { prefix } from "@config/config";
 import type { NextPage } from "next";
 
@@ -23,15 +24,36 @@ const backItems = [
   "Oracle, JDBC, Oracle DB Scheduler, MyBatis",
 ];
 
-const reviewItems = [
-  "▪️ Java의 MVC패턴을 이용한 첫 프로젝트이다.",
-  "▪️ 연습용이라 간단하게만 구현을 하였지만 infinite scroll, sorting등 기술을 구현해봤다.",
-  "▪️ Ajax를 이용하여 비동기 통신을 많이 배우게 되었다.",
-  "▪️ 상품의 다중구매를 구현하는데 처음에 sql을 어떻게 할지 몰라서 고민했었고 \n   그 결과 상품의 id값과 설명을 단일로 보내지 않고 한 번에 동적으로 foreach문을 이용해 insert를 하였다.",
-];
+const reviewItems: ReactChild = <>
+  <ContentText>
+    {"📍 Java의 "}{<b>{"MVC패턴과 jsp"}</b>}{"를 이용한 첫 프로젝트이다."}
+  </ContentText>
+  <br/>
+
+  <ContentText>
+    {"📍 연습용이라 간단하게 쇼핑몰의 큰 기능들만 구현을 하였지만 infinite scroll, sorting등 기술을 구현해봤다."}
+  </ContentText>
+  <br/>
+
+  <ContentText>
+    {<b>{"📍 bootstrap"}</b>}{` 라이브러리를 처음 사용하였고 class를 이용하여 디자인하는 작동법과 개발하기에 빠르고 편리함을 알게되었다.
+    하지만 class들을 다 찾아야하는 번거로움이 있고 미리 짜여진 디자인이라 수정하기에 번거로움이 있다.`}
+  </ContentText>
+  <br/>
+
+  <ContentText>
+    {"📍 "}{<b>{"Ajax"}</b>}{"를 이용하여 비동기 통신을 많이 배우게 되었다."}
+  </ContentText>
+  <br/>
+
+  <ContentText>
+    {"📍 상품의 다중구매를 구현하는데 처음에 sql을 어떻게 할지 몰라서 고민했었고 \n   그 결과 상품의 id값과 설명을 단일로 보내지 않고 한 번에 동적으로 foreach문을 이용해 insert를 하였다."}
+  </ContentText>
+  <br/>
+</>;
 
 const retrospectItems = [
-  "▪️ 프로젝트기간이 명확하지 않아 Q&A 기능을 완성하지 못한 점",
+  "▪️ 프로젝트의 개발기간이 명확하지 않아 Q&A 기능을 완성하지 못한 점",
   "▪️ 디자인인 보다는 기능을 신경 써서 디자인이 미흡한 점",
   "▪️ 결제 라이브러리를 사용 안 하고 디비로만 결제를 처리한 점",
 ];

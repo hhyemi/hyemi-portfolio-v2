@@ -1,10 +1,11 @@
-import React from "react";
+import React, { ReactChild } from "react";
 
 import { SectionSkills } from "@components/molecules/section-skills";
 import { ProjectIntroduce } from "@components/organisms/project-introduce";
 import { ProjectReview } from "@components/organisms/project-review";
 import { ProjectScreens } from "@components/organisms/project-screens";
 import { LayoutDetail } from "@components/templates/layout-detail";
+import { ContentText } from "@components/templates/projects";
 import { prefix } from "@config/config";
 import type { NextPage } from "next";
 
@@ -26,17 +27,35 @@ const backItems = [
   "Node.js, NPM, Socket.io, Express",
 ];
 
-const reviewItems = [
-  "▪️ Java의 MVC(Model, View, Controller)패턴을 사용하였다. Model단에서는 데이터베이스와 관련된 로직을, ",
-  "  View단에서는 사용자에게 보여주는 화면을, Controller단에는 Model과 View를 연결해주기 위한 매개체로 구현하였다.",
-  "▪️ 각 구성요소를 독립시켜 따로 집중할 수 있어 개발의 효율성도 높이고 유지보수와 확장하기가 쉬웠다.",
-  "▪️ 하지만 설계나 하나의 기능을 할 때 규묘자체가 복잡해 개발비용이 많이드는 문제가 있었다.",
-  "▪️ 많은 API(javax, kakao map, sns, i'm port 등등)를 이용하여 api사용하는 법을 많이 알게되었다.",
-  "▪️ Mybatis를 이용하여 sql 공부가 많이 된 것 같다.",
-  "▪️ 요구사항정의서, useCase정의서, Application Modeling, 화면정의서, ERD, 테이블 정의서 등",
-  "  많은 문서를 작성하여 프로젝트를 진행하여 시작하기 전에 프로젝트 분석이 쉬웠다.",
-  "▪️ 학원에 들어가서 팀원들이랑 같이 진행한 프로젝트이고 팀장으로 참여하여 소통하는 법을 많이 배웠다.",
-];
+const reviewItems: ReactChild = <>
+  <ContentText>
+    {"📍 Java의 "}{<b>{"MVC(Model, View, Controller)패턴"}</b>}{`을 사용하였다.
+    Model단에서는 데이터베이스와 관련된 로직을, View단에서는 사용자에게 보여주는 화면을, Controller단에는 Model과 View를 연결해주기 위한 매개체로 구현하였다.
+    각 구성요소를 독립시켜 따로 집중할 수 있어 개발의 효율성도 높이고 유지보수와 확장하기가 쉬웠다.
+    하지만 설계나 하나의 기능을 할 때 규묘자체가 복잡해 개발비용이 많이드는 문제가 있었다.`}
+  </ContentText>
+  <br/>
+
+  <ContentText>
+    {"📍 많은 "}{<b>{"API"}</b>}{"(javax, kakao map, sns, i'm port 등등)를 이용하여 비용과 시간을 아끼고 연동하는 방법을 많이 알게되었다."}
+  </ContentText>
+  <br/>
+
+  <ContentText>
+    {"📍 데이터베이스 연동을 도와주는 프레임워크인 Mybatis를 이용하여 xml파일에 "}{<b>{"sql를 작성하면서 query공부"}</b>}{"가 많이 된 것 같다."}
+  </ContentText>
+  <br/>
+
+  <ContentText>
+    {<b>{"📍 요구사항정의서, useCase정의서, Application Modeling, 화면정의서, ERD, 테이블 정의서 등"}</b>}{` 많은 문서를 작성하여 
+    프로젝트를 진행하여 시작하기 전에 프로젝트 분석이 쉬웠다.`}
+  </ContentText>
+  <br/>
+
+  <ContentText>
+    {"📍 학원에 들어가서 팀원들이랑 같이 진행한 프로젝트이고 팀장으로 참여하여 "}{<b>{"소통하는 법"}</b>}{"을 많이 배웠다."}
+  </ContentText>
+</>;
 
 const retrospectItems = [
   "▪️ 반응형을 구현하지 못한 점",
