@@ -129,8 +129,11 @@ const Qmit: NextPage = () => {
           <Box>
             <TaskTitle>{"▎payment system 구축"}</TaskTitle>
             <Box sx={{ pl: 2 }}>
-              <ContentText>{"• I'm port를 통한 PG사 결제기능 구현"}</ContentText>
-              <ContentText>{"• 재결제, 플랜변경, 재시도, 환불, 해지 구현"}</ContentText>
+              <ContentText sx={{ mb: 2 }}>{"• I'm port를 통한 PG사 결제 기능 구현"}</ContentText>
+              <ContentText sx={{ mb: 2 }}>{`• 재결제, 플랜변경, 재시도, 환불, 해지 구현
+                결제하는 부분이나 플랜을 선택하는 부분이 중복이 많아져 같은 코드가 많아지고 길어져서
+                컴포넌트를 재사용하였고 custom hook을 만들어서 i'm port의 key 발급과 결제하는 부분을 재사용하였다.`}</ContentText>
+              <ContentText sx={{ mb: 2 }}>{"• 상태에 따라 보이는 화면과 기능이 달라서 결제상태를 store에 저장하여 state를 관리하였다."}</ContentText>
               <ContentText>{"• 결제내역, 인보이스내역 및 변경"}</ContentText>
             </Box>
 
@@ -146,34 +149,47 @@ const Qmit: NextPage = () => {
               <Image src={`${prefix}/images/chart.png`} sx={{ width: ["400px", "500px"], my: 1 }}/>
 
               <ContentText sx={{ mt: 3 }}>{"▪️ Result : "}</ContentText>
-              <ContentText>{"• 90개 이상의 chart 구현"}</ContentText>
-              <ContentText>{"• 시간과 노력 및 코드를 엄청나게 절약, 차트를 추가하거나 수정하는것이 빠르고 쉬워짐"}</ContentText>
-              <ContentText>{"• bar, line, stack, polar 등 다양한 종류와 최근7일간, 최근28일간 데이터 표현"}</ContentText>
+              <ContentText>{"• 90개 이상의 chart 구현하였다."}</ContentText>
+              <ContentText>{"• 시간과 노력 및 코드를 엄청나게 절약, 차트를 추가하거나 수정하는것이 빠르고 쉬워졌다."}</ContentText>
+              <ContentText>{"• bar, line, stack, polar 등 다양한 종류와 최근7일간, 최근28일간 데이터 표현이 가능했다."}</ContentText>
               <ContentImage src={`${prefix}/images/qmit-chart1.png`}/><br/>
               <ContentImage src={`${prefix}/images/qmit-chart2.png`}/>
             </Box>
 
             <TaskTitle>{"▎design system 구축"}</TaskTitle>
             <Box sx={{ pl: 2 }}>
-              <ContentText>{"• component design 논의 및 구축"}</ContentText>
-              <ContentText>{"• storybook"}</ContentText>
+              <ContentText sx={{ mb: 2 }}>
+                {`• atomic design patten 을 이용하여 component의 재사용성을 높게 개발을 하였다.
+                하다 보니 Molecule와 Organism의 구분이 애매모호해져서 정리가 필요하기도 하였고 
+                비슷한 component들이 생기기도 하고 재사용하고 싶어도 어떤 component가 있고 기능이 어떤 것인지 헷갈리기 시작했다.
+                그래서 storybook을 도입하여 사용하기 시작하였다.
+              `}</ContentText>
+              <ContentText sx={{ mb: 2 }}>
+                {`• storybook을 사용하여 디자이너와 디자인 QA이나 자연스럽게 component 단위로 생각하며 개발하게 되었지만
+                재사용하지 않는 컴포넌트들은 만들어야 하는지 의문도 생겼었고 재사용이 필요하게 더 만들게 되었다
+                하지만 소규모 프로젝트여서 그런지 소홀히 하게 되고 시간이 없어 밀린 숙제처럼 하게 되는 단점이 있었다.`}
+              </ContentText>
+              <ContentText sx={{ mb: 2 }}>{"• 디자이너와 개발자가 함께 네이밍이나 웹과 앱의 디자인 동기화에 대해 논의 및 구축하였다."}</ContentText>
             </Box>
 
             <TaskTitle>{"▎team 관리 페이지"}</TaskTitle>
             <Box sx={{ pl: 2 }}>
-              <ContentText>{"• 팀 목록, 팀추가, 팀수정, 팀삭제"}</ContentText>
-              <ContentText>{"• 팀 이동하여 팀 정보 표현"}</ContentText>
+              <ContentText>{"• 팀 목록, 팀 추가, 팀 수정, 팀 삭제"}</ContentText>
+              <ContentText>{"• 팀을 선택할 시 상세페이지로 이동하여 팀 정보 표현"}</ContentText>
+              <ContentText>{`• 브라우저 뷰포트(Viewport)와 설정한 요소(Element)의 교차점을 관찰하며 지금 보이는 요소인지 아닌지를 비동기적으로 구분하는 
+               IntersectionObserver을 사용하여 무한스크롤을 구현하였다. 재사용성을 위해 useIntersectionObserver인 custom hook을 만들어 사용하였다.`}</ContentText>
               <ContentImage src={`${prefix}/images/qmit-team.png`}/>
             </Box>
 
             <TaskTitle>{"▎반응형 작업"}</TaskTitle>
             <Box sx={{ pl: 2 }}>
               <ContentText>{"• 웹, 태블릿, 핸드폰 사이즈(xl, lg, md, sm) 반응형 작업"}</ContentText>
+              <ContentText>{"• styled-system와 theme ui를 사용하여  컴포넌트 작업과 반응형 작업이 수월하였다."}</ContentText>
               <ContentImage src={`${prefix}/images/qmit-dashboard.png`}/>
             </Box>
 
             <TaskTitle>{"▎기존 개발 유지보수"}</TaskTitle>
-            <ContentText sx={{ pl: 2 }}>{"• issue tracking에 올라온 task들을 우선순위(priority)에 따라 처리 "}</ContentText>
+            <ContentText sx={{ pl: 2 }}>{"• QA를 통해 issue tracking에 올라온 task들을 우선순위(priority)에 따라 처리하였다."}</ContentText>
           </Box>
         </Flex>
       </Box>
