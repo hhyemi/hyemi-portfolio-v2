@@ -10,7 +10,8 @@ const careerItems = [
     menuTitle: "CAREER",
     image: `${prefix}/images/qmit.png`,
     title: "큐엠아이티 (QMIT) : 팀원(프론트엔드개발자)",
-    subtitle: "선수와 지도자를 위한 B2C 플랫폼 서비스로, 데이터를 통해 스포츠 선수의 부상을 예방하고, 컨디셔닝을 향상시키는 데이터 플랫폼",
+    subtitle:
+      "팀 소속 컨디션, 부상데이터를 확인하고 관리할 수 있는 B2B 서비스와 선수 개인이 사용할 수 있는 컨디션, 부상 모니터링 B2C서비스",
     period: "2021.06.14 ~ 2022.06.30 (1년 17일)",
     skills: [
       "JavaScript, TypeScript, React.js, Next.js",
@@ -31,7 +32,6 @@ const careerItems = [
     ],
     page: "/career/geotwo",
   },
-
 ];
 
 export const Career: React.FunctionComponent<CareerProps> = () => {
